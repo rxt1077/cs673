@@ -1,0 +1,916 @@
+==========================
+<table class="W(100%) M(0)" data-test="historical-prices" data-reactid="33">
+ <thead data-reactid="34">
+  <tr class="C($c-fuji-grey-j) Fz(xs) Ta(end)" data-reactid="35">
+   <th class="Ta(start) W(100px) Fw(400) Py(6px)" data-reactid="36"><span data-reactid="37">Date</span></th>
+   <th class="Fw(400) Py(6px)" data-reactid="38"><span data-reactid="39">Open</span></th>
+   <th class="Fw(400) Py(6px)" data-reactid="40"><span data-reactid="41">High</span></th>
+   <th class="Fw(400) Py(6px)" data-reactid="42"><span data-reactid="43">Low</span></th>
+   <th class="Fw(400) Py(6px)" data-reactid="44"><span data-reactid="45">Close*</span></th>
+   <th class="Fw(400) Py(6px)" data-reactid="46"><span data-reactid="47">Adj Close**</span></th>
+   <th class="Fw(400) Py(6px)" data-reactid="48"><span data-reactid="49">Volume</span></th>
+  </tr>
+ </thead>
+ <tbody data-reactid="50">
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="51">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="52"><span data-reactid="53">Feb 14, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="54"><span data-reactid="55">137.17</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="56"><span data-reactid="57">137.60</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="58"><span data-reactid="59">136.21</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="60"><span data-reactid="61">137.15</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="62"><span data-reactid="63">137.15</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="64"><span data-reactid="65">1,471,779</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="66">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="67"><span data-reactid="68">Feb 13, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="69"><span data-reactid="70">136.92</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="71"><span data-reactid="72">137.92</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="73"><span data-reactid="74">136.41</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="75"><span data-reactid="76">137.52</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="77"><span data-reactid="78">137.52</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="79"><span data-reactid="80">4,252,500</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="81">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="82"><span data-reactid="83">Feb 12, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="84"><span data-reactid="85">135.15</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="86"><span data-reactid="87">136.20</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="88"><span data-reactid="89">134.86</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="90"><span data-reactid="91">136.05</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="92"><span data-reactid="93">136.05</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="94"><span data-reactid="95">3,317,200</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="96">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="97"><span data-reactid="98">Feb 11, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="99"><span data-reactid="100">134.29</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="101"><span data-reactid="102">135.15</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="103"><span data-reactid="104">133.91</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="105"><span data-reactid="106">133.99</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="107"><span data-reactid="108">133.99</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="109"><span data-reactid="110">3,095,100</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="111">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="112"><span data-reactid="113">Feb 08, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="114"><span data-reactid="115">132.34</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="116"><span data-reactid="117">133.71</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="118"><span data-reactid="119">132.19</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="120"><span data-reactid="121">133.71</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="122"><span data-reactid="123">133.71</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="124"><span data-reactid="125">3,249,800</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="126">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="127"><span data-reactid="128">Feb 07, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="129"><span data-reactid="130">133.55</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="131"><span data-reactid="132">134.47</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="133"><span data-reactid="134">132.12</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="135"><span data-reactid="136">133.19</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="137"><span data-reactid="138">133.19</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="139"><span data-reactid="140">4,379,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="141">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="142"><span data-reactid="143">Feb 07, 2019</span></td>
+   <td class="Ta(c) Py(10px) Pstart(10px)" colspan="6" data-reactid="144"><strong data-reactid="145">1.57</strong>
+    <!-- react-text: 146 --> 
+    <!-- /react-text --><span data-reactid="147">Dividend</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="148">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="149"><span data-reactid="150">Feb 06, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="151"><span data-reactid="152">135.22</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="153"><span data-reactid="154">136.65</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="155"><span data-reactid="156">135.17</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="157"><span data-reactid="158">136.32</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="159"><span data-reactid="160">134.75</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="161"><span data-reactid="162">4,879,700</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="163">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="164"><span data-reactid="165">Feb 05, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="166"><span data-reactid="167">135.28</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="168"><span data-reactid="169">135.82</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="170"><span data-reactid="171">134.92</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="172"><span data-reactid="173">135.55</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="174"><span data-reactid="175">133.99</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="176"><span data-reactid="177">5,398,900</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="178">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="179"><span data-reactid="180">Feb 04, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="181"><span data-reactid="182">134.02</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="183"><span data-reactid="184">135.20</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="185"><span data-reactid="186">132.99</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="187"><span data-reactid="188">135.19</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="189"><span data-reactid="190">133.63</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="191"><span data-reactid="192">3,966,600</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="193">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="194"><span data-reactid="195">Feb 01, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="196"><span data-reactid="197">134.97</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="198"><span data-reactid="199">135.20</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="200"><span data-reactid="201">133.35</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="202"><span data-reactid="203">134.10</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="204"><span data-reactid="205">132.56</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="206"><span data-reactid="207">3,806,000</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="208">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="209"><span data-reactid="210">Jan 31, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="211"><span data-reactid="212">134.45</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="213"><span data-reactid="214">134.72</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="215"><span data-reactid="216">133.74</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="217"><span data-reactid="218">134.42</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="219"><span data-reactid="220">132.87</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="221"><span data-reactid="222">4,884,000</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="223">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="224"><span data-reactid="225">Jan 30, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="226"><span data-reactid="227">134.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="228"><span data-reactid="229">135.03</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="230"><span data-reactid="231">133.25</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="232"><span data-reactid="233">134.38</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="234"><span data-reactid="235">132.83</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="236"><span data-reactid="237">4,500,900</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="238">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="239"><span data-reactid="240">Jan 29, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="241"><span data-reactid="242">134.29</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="243"><span data-reactid="244">135.41</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="245"><span data-reactid="246">133.60</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="247"><span data-reactid="248">134.33</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="249"><span data-reactid="250">132.78</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="251"><span data-reactid="252">5,037,100</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="253">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="254"><span data-reactid="255">Jan 28, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="256"><span data-reactid="257">133.10</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="258"><span data-reactid="259">134.81</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="260"><span data-reactid="261">132.58</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="262"><span data-reactid="263">134.27</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="264"><span data-reactid="265">132.72</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="266"><span data-reactid="267">5,357,700</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="268">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="269"><span data-reactid="270">Jan 25, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="271"><span data-reactid="272">132.87</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="273"><span data-reactid="274">134.44</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="275"><span data-reactid="276">132.43</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="277"><span data-reactid="278">133.97</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="279"><span data-reactid="280">132.43</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="281"><span data-reactid="282">5,707,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="283">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="284"><span data-reactid="285">Jan 24, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="286"><span data-reactid="287">132.63</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="288"><span data-reactid="289">133.21</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="290"><span data-reactid="291">131.43</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="292"><span data-reactid="293">132.53</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="294"><span data-reactid="295">131.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="296"><span data-reactid="297">6,322,900</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="298">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="299"><span data-reactid="300">Jan 23, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="301"><span data-reactid="302">131.37</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="303"><span data-reactid="304">135.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="305"><span data-reactid="306">130.31</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="307"><span data-reactid="308">132.89</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="309"><span data-reactid="310">131.36</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="311"><span data-reactid="312">22,063,700</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="313">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="314"><span data-reactid="315">Jan 22, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="316"><span data-reactid="317">123.30</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="318"><span data-reactid="319">123.80</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="320"><span data-reactid="321">121.54</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="322"><span data-reactid="323">122.52</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="324"><span data-reactid="325">121.11</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="326"><span data-reactid="327">10,052,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="328">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="329"><span data-reactid="330">Jan 18, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="331"><span data-reactid="332">123.27</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="333"><span data-reactid="334">124.72</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="335"><span data-reactid="336">122.71</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="337"><span data-reactid="338">123.82</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="339"><span data-reactid="340">122.39</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="341"><span data-reactid="342">6,008,500</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="343">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="344"><span data-reactid="345">Jan 17, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="346"><span data-reactid="347">120.56</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="348"><span data-reactid="349">122.41</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="350"><span data-reactid="351">120.55</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="352"><span data-reactid="353">122.19</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="354"><span data-reactid="355">120.78</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="356"><span data-reactid="357">5,029,900</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="358">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="359"><span data-reactid="360">Jan 16, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="361"><span data-reactid="362">121.58</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="363"><span data-reactid="364">122.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="365"><span data-reactid="366">120.83</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="367"><span data-reactid="368">121.62</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="369"><span data-reactid="370">120.22</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="371"><span data-reactid="372">3,841,100</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="373">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="374"><span data-reactid="375">Jan 15, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="376"><span data-reactid="377">120.96</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="378"><span data-reactid="379">121.93</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="380"><span data-reactid="381">120.82</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="382"><span data-reactid="383">121.73</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="384"><span data-reactid="385">120.33</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="386"><span data-reactid="387">3,507,500</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="388">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="389"><span data-reactid="390">Jan 14, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="391"><span data-reactid="392">120.51</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="393"><span data-reactid="394">120.65</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="395"><span data-reactid="396">119.76</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="397"><span data-reactid="398">120.39</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="399"><span data-reactid="400">119.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="401"><span data-reactid="402">5,228,700</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="403">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="404"><span data-reactid="405">Jan 11, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="406"><span data-reactid="407">121.58</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="408"><span data-reactid="409">121.62</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="410"><span data-reactid="411">120.20</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="412"><span data-reactid="413">121.46</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="414"><span data-reactid="415">120.06</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="416"><span data-reactid="417">3,722,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="418">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="419"><span data-reactid="420">Jan 10, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="421"><span data-reactid="422">120.08</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="423"><span data-reactid="424">121.86</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="425"><span data-reactid="426">119.95</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="427"><span data-reactid="428">121.79</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="429"><span data-reactid="430">120.39</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="431"><span data-reactid="432">3,910,000</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="433">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="434"><span data-reactid="435">Jan 09, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="436"><span data-reactid="437">120.91</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="438"><span data-reactid="439">121.40</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="440"><span data-reactid="441">119.87</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="442"><span data-reactid="443">120.69</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="444"><span data-reactid="445">119.30</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="446"><span data-reactid="447">3,633,700</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="448">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="449"><span data-reactid="450">Jan 08, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="451"><span data-reactid="452">119.66</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="453"><span data-reactid="454">120.57</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="455"><span data-reactid="456">118.98</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="457"><span data-reactid="458">119.83</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="459"><span data-reactid="460">118.45</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="461"><span data-reactid="462">4,763,600</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="463">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="464"><span data-reactid="465">Jan 07, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="466"><span data-reactid="467">117.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="468"><span data-reactid="469">118.83</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="470"><span data-reactid="471">116.67</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="472"><span data-reactid="473">118.15</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="474"><span data-reactid="475">116.79</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="476"><span data-reactid="477">3,751,200</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="478">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="479"><span data-reactid="480">Jan 04, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="481"><span data-reactid="482">114.91</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="483"><span data-reactid="484">117.49</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="485"><span data-reactid="486">114.44</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="487"><span data-reactid="488">117.32</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="489"><span data-reactid="490">115.97</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="491"><span data-reactid="492">4,477,800</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="493">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="494"><span data-reactid="495">Jan 03, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="496"><span data-reactid="497">114.53</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="498"><span data-reactid="499">114.88</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="500"><span data-reactid="501">112.69</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="502"><span data-reactid="503">112.91</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="504"><span data-reactid="505">111.61</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="506"><span data-reactid="507">4,346,700</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="508">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="509"><span data-reactid="510">Jan 02, 2019</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="511"><span data-reactid="512">112.01</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="513"><span data-reactid="514">115.98</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="515"><span data-reactid="516">111.69</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="517"><span data-reactid="518">115.21</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="519"><span data-reactid="520">113.88</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="521"><span data-reactid="522">4,239,900</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="523">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="524"><span data-reactid="525">Dec 31, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="526"><span data-reactid="527">113.33</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="528"><span data-reactid="529">114.35</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="530"><span data-reactid="531">112.42</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="532"><span data-reactid="533">113.67</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="534"><span data-reactid="535">112.36</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="536"><span data-reactid="537">4,982,800</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="538">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="539"><span data-reactid="540">Dec 28, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="541"><span data-reactid="542">114.22</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="543"><span data-reactid="544">114.80</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="545"><span data-reactid="546">112.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="547"><span data-reactid="548">113.03</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="549"><span data-reactid="550">111.73</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="551"><span data-reactid="552">5,117,500</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="553">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="554"><span data-reactid="555">Dec 27, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="556"><span data-reactid="557">109.99</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="558"><span data-reactid="559">113.78</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="560"><span data-reactid="561">109.47</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="562"><span data-reactid="563">113.78</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="564"><span data-reactid="565">112.47</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="566"><span data-reactid="567">6,045,600</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="568">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="569"><span data-reactid="570">Dec 26, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="571"><span data-reactid="572">108.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="573"><span data-reactid="574">111.39</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="575"><span data-reactid="576">105.94</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="577"><span data-reactid="578">111.39</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="579"><span data-reactid="580">110.11</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="581"><span data-reactid="582">6,645,800</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="583">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="584"><span data-reactid="585">Dec 24, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="586"><span data-reactid="587">109.90</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="588"><span data-reactid="589">111.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="590"><span data-reactid="591">107.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="592"><span data-reactid="593">107.57</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="594"><span data-reactid="595">106.33</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="596"><span data-reactid="597">3,821,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="598">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="599"><span data-reactid="600">Dec 21, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="601"><span data-reactid="602">112.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="603"><span data-reactid="604">115.28</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="605"><span data-reactid="606">110.44</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="607"><span data-reactid="608">110.94</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="609"><span data-reactid="610">109.66</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="611"><span data-reactid="612">10,386,500</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="613">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="614"><span data-reactid="615">Dec 20, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="616"><span data-reactid="617">115.70</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="618"><span data-reactid="619">116.45</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="620"><span data-reactid="621">111.70</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="622"><span data-reactid="623">113.02</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="624"><span data-reactid="625">111.72</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="626"><span data-reactid="627">8,454,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="628">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="629"><span data-reactid="630">Dec 19, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="631"><span data-reactid="632">117.15</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="633"><span data-reactid="634">120.27</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="635"><span data-reactid="636">115.97</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="637"><span data-reactid="638">116.43</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="639"><span data-reactid="640">115.09</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="641"><span data-reactid="642">6,979,800</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="643">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="644"><span data-reactid="645">Dec 18, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="646"><span data-reactid="647">116.90</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="648"><span data-reactid="649">118.23</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="650"><span data-reactid="651">116.02</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="652"><span data-reactid="653">116.65</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="654"><span data-reactid="655">115.31</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="656"><span data-reactid="657">6,290,200</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="658">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="659"><span data-reactid="660">Dec 17, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="661"><span data-reactid="662">119.07</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="663"><span data-reactid="664">119.78</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="665"><span data-reactid="666">115.07</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="667"><span data-reactid="668">116.10</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="669"><span data-reactid="670">114.76</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="671"><span data-reactid="672">7,374,500</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="673">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="674"><span data-reactid="675">Dec 14, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="676"><span data-reactid="677">119.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="678"><span data-reactid="679">121.11</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="680"><span data-reactid="681">119.44</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="682"><span data-reactid="683">119.90</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="684"><span data-reactid="685">118.52</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="686"><span data-reactid="687">4,554,200</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="688">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="689"><span data-reactid="690">Dec 13, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="691"><span data-reactid="692">121.26</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="693"><span data-reactid="694">121.79</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="695"><span data-reactid="696">120.17</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="697"><span data-reactid="698">120.73</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="699"><span data-reactid="700">119.34</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="701"><span data-reactid="702">3,993,600</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="703">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="704"><span data-reactid="705">Dec 12, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="706"><span data-reactid="707">122.51</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="708"><span data-reactid="709">122.88</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="710"><span data-reactid="711">121.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="712"><span data-reactid="713">121.16</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="714"><span data-reactid="715">119.76</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="716"><span data-reactid="717">3,560,500</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="718">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="719"><span data-reactid="720">Dec 11, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="721"><span data-reactid="722">123.25</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="723"><span data-reactid="724">123.81</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="725"><span data-reactid="726">120.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="727"><span data-reactid="728">120.89</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="729"><span data-reactid="730">119.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="731"><span data-reactid="732">5,043,100</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="733">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="734"><span data-reactid="735">Dec 10, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="736"><span data-reactid="737">119.74</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="738"><span data-reactid="739">121.68</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="740"><span data-reactid="741">118.52</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="742"><span data-reactid="743">121.13</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="744"><span data-reactid="745">119.73</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="746"><span data-reactid="747">6,549,500</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="748">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="749"><span data-reactid="750">Dec 07, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="751"><span data-reactid="752">123.90</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="753"><span data-reactid="754">124.05</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="755"><span data-reactid="756">118.87</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="757"><span data-reactid="758">119.34</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="759"><span data-reactid="760">117.97</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="761"><span data-reactid="762">7,019,600</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="763">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="764"><span data-reactid="765">Dec 06, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="766"><span data-reactid="767">119.72</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="768"><span data-reactid="769">123.91</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="770"><span data-reactid="771">119.30</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="772"><span data-reactid="773">123.91</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="774"><span data-reactid="775">122.48</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="776"><span data-reactid="777">6,938,000</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="778">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="779"><span data-reactid="780">Dec 04, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="781"><span data-reactid="782">124.49</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="783"><span data-reactid="784">124.92</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="785"><span data-reactid="786">121.33</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="787"><span data-reactid="788">121.60</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="789"><span data-reactid="790">120.20</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="791"><span data-reactid="792">6,000,700</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="793">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="794"><span data-reactid="795">Dec 03, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="796"><span data-reactid="797">125.67</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="798"><span data-reactid="799">126.59</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="800"><span data-reactid="801">124.36</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="802"><span data-reactid="803">125.31</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="804"><span data-reactid="805">123.87</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="806"><span data-reactid="807">5,846,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="808">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="809"><span data-reactid="810">Nov 30, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="811"><span data-reactid="812">121.66</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="813"><span data-reactid="814">124.69</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="815"><span data-reactid="816">121.48</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="817"><span data-reactid="818">124.27</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="819"><span data-reactid="820">122.84</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="821"><span data-reactid="822">7,251,600</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="823">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="824"><span data-reactid="825">Nov 29, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="826"><span data-reactid="827">122.44</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="828"><span data-reactid="829">123.12</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="830"><span data-reactid="831">121.40</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="832"><span data-reactid="833">121.48</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="834"><span data-reactid="835">120.08</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="836"><span data-reactid="837">5,200,100</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="838">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="839"><span data-reactid="840">Nov 28, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="841"><span data-reactid="842">121.01</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="843"><span data-reactid="844">123.09</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="845"><span data-reactid="846">120.22</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="847"><span data-reactid="848">123.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="849"><span data-reactid="850">121.58</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="851"><span data-reactid="852">5,104,500</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="853">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="854"><span data-reactid="855">Nov 27, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="856"><span data-reactid="857">118.38</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="858"><span data-reactid="859">120.04</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="860"><span data-reactid="861">118.37</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="862"><span data-reactid="863">120.03</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="864"><span data-reactid="865">118.65</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="866"><span data-reactid="867">4,903,800</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="868">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="869"><span data-reactid="870">Nov 26, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="871"><span data-reactid="872">118.37</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="873"><span data-reactid="874">120.25</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="875"><span data-reactid="876">118.06</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="877"><span data-reactid="878">119.56</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="879"><span data-reactid="880">118.18</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="881"><span data-reactid="882">5,011,100</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="883">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="884"><span data-reactid="885">Nov 23, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="886"><span data-reactid="887">118.09</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="888"><span data-reactid="889">118.34</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="890"><span data-reactid="891">116.91</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="892"><span data-reactid="893">117.19</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="894"><span data-reactid="895">115.84</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="896"><span data-reactid="897">2,334,700</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="898">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="899"><span data-reactid="900">Nov 21, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="901"><span data-reactid="902">117.61</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="903"><span data-reactid="904">119.51</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="905"><span data-reactid="906">117.39</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="907"><span data-reactid="908">118.57</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="909"><span data-reactid="910">117.20</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="911"><span data-reactid="912">5,335,800</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="913">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="914"><span data-reactid="915">Nov 20, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="916"><span data-reactid="917">118.49</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="918"><span data-reactid="919">119.49</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="920"><span data-reactid="921">116.70</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="922"><span data-reactid="923">117.20</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="924"><span data-reactid="925">115.85</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="926"><span data-reactid="927">6,233,800</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="928">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="929"><span data-reactid="930">Nov 19, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="931"><span data-reactid="932">121.63</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="933"><span data-reactid="934">122.18</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="935"><span data-reactid="936">119.77</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="937"><span data-reactid="938">120.31</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="939"><span data-reactid="940">118.92</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="941"><span data-reactid="942">4,131,200</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="943">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="944"><span data-reactid="945">Nov 16, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="946"><span data-reactid="947">120.89</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="948"><span data-reactid="949">121.85</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="950"><span data-reactid="951">120.54</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="952"><span data-reactid="953">121.57</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="954"><span data-reactid="955">120.17</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="956"><span data-reactid="957">4,076,300</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="958">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="959"><span data-reactid="960">Nov 15, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="961"><span data-reactid="962">119.66</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="963"><span data-reactid="964">121.44</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="965"><span data-reactid="966">119.51</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="967"><span data-reactid="968">121.44</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="969"><span data-reactid="970">120.04</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="971"><span data-reactid="972">5,207,900</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="973">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="974"><span data-reactid="975">Nov 14, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="976"><span data-reactid="977">121.11</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="978"><span data-reactid="979">121.93</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="980"><span data-reactid="981">119.77</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="982"><span data-reactid="983">120.20</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="984"><span data-reactid="985">118.82</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="986"><span data-reactid="987">4,762,300</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="988">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="989"><span data-reactid="990">Nov 13, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="991"><span data-reactid="992">121.19</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="993"><span data-reactid="994">122.25</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="995"><span data-reactid="996">119.90</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="997"><span data-reactid="998">120.84</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="999"><span data-reactid="1000">119.45</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1001"><span data-reactid="1002">4,084,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1003">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1004"><span data-reactid="1005">Nov 12, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1006"><span data-reactid="1007">123.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1008"><span data-reactid="1009">123.57</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1010"><span data-reactid="1011">120.65</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1012"><span data-reactid="1013">120.90</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1014"><span data-reactid="1015">119.51</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1016"><span data-reactid="1017">5,379,100</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1018">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1019"><span data-reactid="1020">Nov 09, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1021"><span data-reactid="1022">123.61</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1023"><span data-reactid="1024">124.57</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1025"><span data-reactid="1026">121.96</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1027"><span data-reactid="1028">123.54</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1029"><span data-reactid="1030">122.12</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1031"><span data-reactid="1032">6,961,800</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1033">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1034"><span data-reactid="1035">Nov 08, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1036"><span data-reactid="1037">122.66</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1038"><span data-reactid="1039">124.40</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1040"><span data-reactid="1041">122.63</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1042"><span data-reactid="1043">123.38</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1044"><span data-reactid="1045">121.96</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1046"><span data-reactid="1047">10,396,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1048">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1049"><span data-reactid="1050">Nov 08, 2018</span></td>
+   <td class="Ta(c) Py(10px) Pstart(10px)" colspan="6" data-reactid="1051"><strong data-reactid="1052">1.57</strong>
+    <!-- react-text: 1053 --> 
+    <!-- /react-text --><span data-reactid="1054">Dividend</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1055">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1056"><span data-reactid="1057">Nov 07, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1058"><span data-reactid="1059">123.79</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1060"><span data-reactid="1061">125.06</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1062"><span data-reactid="1063">122.33</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1064"><span data-reactid="1065">124.84</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1066"><span data-reactid="1067">121.85</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1068"><span data-reactid="1069">12,382,700</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1070">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1071"><span data-reactid="1072">Nov 06, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1073"><span data-reactid="1074">120.70</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1075"><span data-reactid="1076">123.81</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1077"><span data-reactid="1078">120.31</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1079"><span data-reactid="1080">123.12</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1081"><span data-reactid="1082">120.17</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1083"><span data-reactid="1084">9,597,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1085">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1086"><span data-reactid="1087">Nov 05, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1088"><span data-reactid="1089">116.10</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1090"><span data-reactid="1091">120.77</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1092"><span data-reactid="1093">116.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1094"><span data-reactid="1095">120.06</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1096"><span data-reactid="1097">117.18</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1098"><span data-reactid="1099">9,144,600</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1100">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1101"><span data-reactid="1102">Nov 02, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1103"><span data-reactid="1104">117.51</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1105"><span data-reactid="1106">117.75</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1107"><span data-reactid="1108">114.54</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1109"><span data-reactid="1110">115.67</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1111"><span data-reactid="1112">112.90</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1113"><span data-reactid="1114">10,592,700</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1115">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1116"><span data-reactid="1117">Nov 01, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1118"><span data-reactid="1119">115.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1120"><span data-reactid="1121">117.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1122"><span data-reactid="1123">115.11</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1124"><span data-reactid="1125">116.83</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1126"><span data-reactid="1127">114.03</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1128"><span data-reactid="1129">13,626,700</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1130">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1131"><span data-reactid="1132">Oct 31, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1133"><span data-reactid="1134">116.49</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1135"><span data-reactid="1136">116.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1137"><span data-reactid="1138">114.09</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1139"><span data-reactid="1140">115.43</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1141"><span data-reactid="1142">112.67</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1143"><span data-reactid="1144">21,645,000</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1145">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1146"><span data-reactid="1147">Oct 30, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1148"><span data-reactid="1149">120.48</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1150"><span data-reactid="1151">121.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1152"><span data-reactid="1153">115.15</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1154"><span data-reactid="1155">115.40</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1156"><span data-reactid="1157">112.64</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1158"><span data-reactid="1159">21,458,600</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1160">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1161"><span data-reactid="1162">Oct 29, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1163"><span data-reactid="1164">119.34</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1165"><span data-reactid="1166">123.95</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1167"><span data-reactid="1168">118.30</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1169"><span data-reactid="1170">119.64</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1171"><span data-reactid="1172">116.77</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1173"><span data-reactid="1174">20,450,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1175">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1176"><span data-reactid="1177">Oct 26, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1178"><span data-reactid="1179">125.21</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1180"><span data-reactid="1181">125.78</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1182"><span data-reactid="1183">123.71</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1184"><span data-reactid="1185">124.79</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1186"><span data-reactid="1187">121.80</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1188"><span data-reactid="1189">8,767,000</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1190">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1191"><span data-reactid="1192">Oct 25, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1193"><span data-reactid="1194">127.25</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1195"><span data-reactid="1196">127.79</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1197"><span data-reactid="1198">125.14</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1199"><span data-reactid="1200">126.45</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1201"><span data-reactid="1202">123.42</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1203"><span data-reactid="1204">10,304,300</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1205">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1206"><span data-reactid="1207">Oct 24, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1208"><span data-reactid="1209">131.17</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1210"><span data-reactid="1211">131.69</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1212"><span data-reactid="1213">127.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1214"><span data-reactid="1215">127.21</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1216"><span data-reactid="1217">124.16</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1218"><span data-reactid="1219">5,710,300</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1220">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1221"><span data-reactid="1222">Oct 23, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1223"><span data-reactid="1224">129.02</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1225"><span data-reactid="1226">131.90</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1227"><span data-reactid="1228">128.41</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1229"><span data-reactid="1230">131.21</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1231"><span data-reactid="1232">128.07</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1233"><span data-reactid="1234">6,463,600</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1235">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1236"><span data-reactid="1237">Oct 22, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1238"><span data-reactid="1239">129.58</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1240"><span data-reactid="1241">130.44</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1242"><span data-reactid="1243">128.40</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1244"><span data-reactid="1245">130.02</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1246"><span data-reactid="1247">126.91</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1248"><span data-reactid="1249">5,719,500</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1250">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1251"><span data-reactid="1252">Oct 19, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1253"><span data-reactid="1254">130.65</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1255"><span data-reactid="1256">131.89</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1257"><span data-reactid="1258">127.96</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1259"><span data-reactid="1260">129.10</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1261"><span data-reactid="1262">126.01</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1263"><span data-reactid="1264">7,791,600</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1265">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1266"><span data-reactid="1267">Oct 18, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1268"><span data-reactid="1269">132.73</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1270"><span data-reactid="1271">133.40</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1272"><span data-reactid="1273">130.04</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1274"><span data-reactid="1275">130.55</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1276"><span data-reactid="1277">127.42</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1278"><span data-reactid="1279">10,011,700</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1280">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1281"><span data-reactid="1282">Oct 17, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1283"><span data-reactid="1284">135.89</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1285"><span data-reactid="1286">137.15</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1287"><span data-reactid="1288">133.42</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1289"><span data-reactid="1290">134.05</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1291"><span data-reactid="1292">130.84</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1293"><span data-reactid="1294">19,464,000</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1295">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1296"><span data-reactid="1297">Oct 16, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1298"><span data-reactid="1299">142.93</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1300"><span data-reactid="1301">145.45</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1302"><span data-reactid="1303">141.58</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1304"><span data-reactid="1305">145.12</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1306"><span data-reactid="1307">141.64</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1308"><span data-reactid="1309">8,695,500</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1310">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1311"><span data-reactid="1312">Oct 15, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1313"><span data-reactid="1314">140.38</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1315"><span data-reactid="1316">142.26</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1317"><span data-reactid="1318">140.14</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1319"><span data-reactid="1320">141.13</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1321"><span data-reactid="1322">137.75</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1323"><span data-reactid="1324">4,965,500</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1325">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1326"><span data-reactid="1327">Oct 12, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1328"><span data-reactid="1329">141.12</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1330"><span data-reactid="1331">141.54</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1332"><span data-reactid="1333">139.08</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1334"><span data-reactid="1335">140.85</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1336"><span data-reactid="1337">137.48</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1338"><span data-reactid="1339">6,563,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1340">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1341"><span data-reactid="1342">Oct 11, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1343"><span data-reactid="1344">142.62</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1345"><span data-reactid="1346">144.19</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1347"><span data-reactid="1348">138.78</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1349"><span data-reactid="1350">139.02</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1351"><span data-reactid="1352">135.69</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1353"><span data-reactid="1354">8,710,500</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1355">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1356"><span data-reactid="1357">Oct 10, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1358"><span data-reactid="1359">147.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1360"><span data-reactid="1361">147.69</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1362"><span data-reactid="1363">142.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1364"><span data-reactid="1365">142.69</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1366"><span data-reactid="1367">139.27</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1368"><span data-reactid="1369">5,547,700</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1370">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1371"><span data-reactid="1372">Oct 09, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1373"><span data-reactid="1374">148.08</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1375"><span data-reactid="1376">148.36</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1377"><span data-reactid="1378">146.93</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1379"><span data-reactid="1380">147.24</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1381"><span data-reactid="1382">143.71</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1383"><span data-reactid="1384">3,642,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1385">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1386"><span data-reactid="1387">Oct 08, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1388"><span data-reactid="1389">148.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1390"><span data-reactid="1391">149.07</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1392"><span data-reactid="1393">147.18</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1394"><span data-reactid="1395">148.39</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1396"><span data-reactid="1397">144.84</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1398"><span data-reactid="1399">3,239,300</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1400">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1401"><span data-reactid="1402">Oct 05, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1403"><span data-reactid="1404">150.90</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1405"><span data-reactid="1406">151.79</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1407"><span data-reactid="1408">147.87</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1409"><span data-reactid="1410">149.03</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1411"><span data-reactid="1412">145.46</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1413"><span data-reactid="1414">4,602,200</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1415">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1416"><span data-reactid="1417">Oct 04, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1418"><span data-reactid="1419">151.69</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1420"><span data-reactid="1421">152.80</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1422"><span data-reactid="1423">150.36</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1424"><span data-reactid="1425">151.31</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1426"><span data-reactid="1427">147.69</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1428"><span data-reactid="1429">4,237,900</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1430">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1431"><span data-reactid="1432">Oct 03, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1433"><span data-reactid="1434">154.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1435"><span data-reactid="1436">154.36</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1437"><span data-reactid="1438">152.80</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1439"><span data-reactid="1440">153.22</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1441"><span data-reactid="1442">149.55</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1443"><span data-reactid="1444">3,315,300</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1445">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1446"><span data-reactid="1447">Oct 02, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1448"><span data-reactid="1449">152.99</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1450"><span data-reactid="1451">153.84</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1452"><span data-reactid="1453">152.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1454"><span data-reactid="1455">153.75</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1456"><span data-reactid="1457">150.07</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1458"><span data-reactid="1459">3,029,900</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1460">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1461"><span data-reactid="1462">Oct 01, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1463"><span data-reactid="1464">151.71</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1465"><span data-reactid="1466">153.42</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1467"><span data-reactid="1468">151.71</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1469"><span data-reactid="1470">153.00</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1471"><span data-reactid="1472">149.34</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1473"><span data-reactid="1474">3,757,400</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1475">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1476"><span data-reactid="1477">Sep 28, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1478"><span data-reactid="1479">151.16</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1480"><span data-reactid="1481">151.63</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1482"><span data-reactid="1483">150.79</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1484"><span data-reactid="1485">151.21</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1486"><span data-reactid="1487">147.59</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1488"><span data-reactid="1489">3,305,800</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1490">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1491"><span data-reactid="1492">Sep 27, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1493"><span data-reactid="1494">152.01</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1495"><span data-reactid="1496">152.39</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1497"><span data-reactid="1498">151.16</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1499"><span data-reactid="1500">151.50</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1501"><span data-reactid="1502">147.87</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1503"><span data-reactid="1504">3,477,600</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1505">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1506"><span data-reactid="1507">Sep 26, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1508"><span data-reactid="1509">152.40</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1510"><span data-reactid="1511">153.35</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1512"><span data-reactid="1513">151.34</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1514"><span data-reactid="1515">151.61</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1516"><span data-reactid="1517">147.98</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1518"><span data-reactid="1519">7,401,900</span></td>
+  </tr>
+  <tr class="BdT Bdc($c-fuji-grey-c) Ta(end) Fz(s) Whs(nw)" data-reactid="1520">
+   <td class="Py(10px) Ta(start) Pend(10px)" data-reactid="1521"><span data-reactid="1522">Sep 25, 2018</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1523"><span data-reactid="1524">149.91</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1525"><span data-reactid="1526">150.41</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1527"><span data-reactid="1528">148.36</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1529"><span data-reactid="1530">148.91</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1531"><span data-reactid="1532">145.34</span></td>
+   <td class="Py(10px) Pstart(10px)" data-reactid="1533"><span data-reactid="1534">4,397,500</span></td>
+  </tr>
+ </tbody>
+ <tfoot data-reactid="1535">
+  <tr class="BdT Bdc($c-fuji-grey-c) C($c-fuji-grey-j) H(36px)" data-reactid="1536">
+   <td class="Fz(xs)" colspan="7" data-reactid="1537"><span data-reactid="1538">*Close price adjusted for splits.</span><span class="Mstart(20px)" data-reactid="1539"><span data-reactid="1540">**Adjusted close price adjusted for both dividends and splits.</span></span></td>
+  </tr>
+ </tfoot>
+</table>
+0.00
