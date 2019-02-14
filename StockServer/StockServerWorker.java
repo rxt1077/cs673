@@ -1,7 +1,8 @@
 /* Java imports */
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 import java.util.Date;
@@ -22,7 +23,7 @@ public class StockServerWorker implements Runnable {
 
         Socket clientSocket = null;
 
-        public StockServerWorker(clientSocket) {
+        public StockServerWorker(Socket clientSocket) {
             this.clientSocket = clientSocket;
         }
 
