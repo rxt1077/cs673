@@ -27,13 +27,24 @@ public class StockServerWorker implements Runnable {
             this.clientSocket = clientSocket;
         }
 
+        /* Reads input from the socket, parses it, performs a price lookup and
+           returns the result */
         public void run() {
             try {
                 BufferedReader input = new BufferedReader(
                     new InputStreamReader(clientSocket.getInputStream()));
-                System.out.println(input.readLine());
+                String userInput[] = input.readLine().split(",");
+                if (userInput.length == 2) {
+                    String symbol = userInput[0];
+                    Date date = dateFormat.parse(userInput[1]);
+                    long startTime = System.nanoTime();
+                    BigDecimal price = getUSPrice(symbol, date);
+                    int duration = (int)((System.nanoTime() - startTime) / 1e6);
+                    System.out.printf("%s,%s = %.2f (%d ms)\n",
+                        symbol, userInput[1], price, duration);
+                }
                 input.close();
-            } catch (IOException e) {
+            } catch (IOException | ParseException e) {
                 e.printStackTrace();
             }
         }

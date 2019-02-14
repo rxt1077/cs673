@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class StockServer implements Runnable {
 
-    int serverPort = 8080;
+    int serverPort;
     ServerSocket serverSocket = null;
     boolean isStopped = false;
     Thread runningThread = null;
