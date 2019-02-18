@@ -12,13 +12,4 @@ the form ‘TICKER,DATE’ and it will respond with the price as ‘USD,200.92�
 in the term you will be supplied with another team/s component which will do the
 same thing.
 
-## Questions to Bring Up
-
-* Date format? Currently using ISO 8601
-* How much historical data should we access? Currently we have a year's worth
-(by day) for US stocks.
-
-## Areas for Improvement
-
-This should really cache historical prices (not today's) as a whole year's worth
-of price data is loaded every time it is called.
+## Errors

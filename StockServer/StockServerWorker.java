@@ -3,23 +3,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
-import java.text.SimpleDateFormat;
-import java.text.ParseException;
+import java.util.concurrent.Future;
+import java.lang.InterruptedException;
+import java.util.concurrent.ExecutionException;
 import java.util.Date;
+import java.util.List;
+import java.util.ArrayList;
 import java.math.BigDecimal;
 import java.net.Socket;
-
-/* jsoup imports */
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 /* A worker thread to fetch stock prices */
 public class StockServerWorker implements Runnable {
 
-        /* Dates in our protocol should be in ISO 8601 format */
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        int poll_interval = 250; /* how long to wait between checking data */
+        int timeout = 1000; /* how long to wait until closing connection */
 
         Socket clientSocket = null;
 
@@ -27,59 +24,46 @@ public class StockServerWorker implements Runnable {
             this.clientSocket = clientSocket;
         }
 
-        /* Reads input from the socket, parses it, performs a price lookup and
-           returns the result */
+        /* Reads input from the socket, parses it, performs a price lookups and
+           returns the results */
         public void run() {
+            String line, symbol, userInput[];
+            BufferedReader input;
+            Date date;
+            PriceFetcher fetcher = new PriceFetcher();
+            List<Future> futures = new ArrayList<Future>();
+            int inactive = 0;
+
+            System.out.println("Worker thread starting...");
             try {
-                BufferedReader input = new BufferedReader(
-                    new InputStreamReader(clientSocket.getInputStream()));
-                String userInput[] = input.readLine().split(",");
-                if (userInput.length == 2) {
-                    String symbol = userInput[0];
-                    Date date = dateFormat.parse(userInput[1]);
-                    long startTime = System.nanoTime();
-                    BigDecimal price = getUSPrice(symbol, date);
-                    int duration = (int)((System.nanoTime() - startTime) / 1e6);
-                    System.out.printf("%s,%s = %.2f (%d ms)\n",
-                        symbol, userInput[1], price, duration);
+                input = new BufferedReader(new InputStreamReader(
+                    clientSocket.getInputStream()));
+                
+                while (true) {
+                    /* if we have input available read it */
+                    if (input.ready()) {
+                        inactive = 0;
+                        line = input.readLine();
+                        System.out.printf("Input: %s\n", line);
+                        futures.add(fetcher.getPrice(line));
+                    /* if we have tasks complete print them */
+                    } else if ((futures.size() > 0) && futures.get(0).isDone()) {
+                        inactive = 0;
+                        System.out.printf("Output: %s\n", futures.get(0).get());
+                        futures.remove(0);
+                    /* if there are no waiting futures and we've timed out */
+                    } else if ((futures.size() == 0) && (inactive >= timeout)) {
+                        break; 
+                    /* wait */
+                    } else {
+                        Thread.sleep(poll_interval);
+                        inactive += poll_interval;
+                    }
                 }
                 input.close();
-            } catch (IOException | ParseException e) {
+            } catch (IOException | InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
-        }
-
-        /* Returns the price in USD of a US stock */
-        BigDecimal getUSPrice(String symbol, Date date) throws IOException, ParseException {
-
-            /* URL for the HISTORY page on Yahoo finance. This shows one year
-               of data as well as the current price */
-            String url = String.format(
-                "https://finance.yahoo.com/quote/%1$s/history?p=%1$s", symbol);
-
-            /* Yahoo Finance uses this stype of date: Feb 14, 2019 */
-            String dateString = String.format("%1$tb %1$td, %1$tY", date);
-
-            /* Download and parse the URL */
-            Document doc = Jsoup.connect(url).get();
-           
-            /* Go through each row of the historical prices table */ 
-            for (Element tr:doc.select("table[data-test='historical-prices'] tr")) {
-
-                /* Pull the data cells from the table */
-                Elements tds = tr.select("td");
-
-                /* Make sure the first column is our date and the row has at
-                   least seven data cells. This rules out dividend rows. */
-                if ((tds.eq(0).text().equals(dateString)) &&
-                    (tds.size() == 7)) {
-
-                    /* The 5th column (index 4) is the price at close. Even
-                       though it is called the price at close it is kept up to
-                       date for the current day as the market is open */
-                    return new BigDecimal(tds.eq(4).text());
-                }
-            }
-            throw new ParseException("Unable to get stock price from HTML", 0);
+            System.out.println("Worker thread exiting...");
         }
 }
