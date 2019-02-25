@@ -37,8 +37,8 @@
         } else if (password_verify($password, $row['hash'])) {
             // set session and redirect
             $_SESSION['email'] = $row['email'];
-            echo '<div>Sign in successful! Redirecting to <a href="main.php">main page</a>.</div>';
-            echo '<meta http-equiv="refresh" content="0;url=main.php">';
+            echo '<div>Sign in successful! Redirecting to <a href="index.php">main page</a>.</div>';
+            echo '<meta http-equiv="refresh" content="0;url=index.php">';
         } else {
             echo '<div>Invalid password.</div>';
             $password = '';

@@ -1,4 +1,4 @@
-USE takestock;
+USE rxt1077;
 
 CREATE TABLE user (
     first VARCHAR(255) NOT NULL,
