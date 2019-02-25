@@ -1,71 +1,101 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <?php require 'include/head.php'; ?>
-    <title>Sign Up</title>
-</head>
-<body>
-    <div class="mdl-layout mdl-js-layout">
-        <main class="mdl_layout__content">
-            <div class="page-content">
-                <div class="dialog-container">
-                    <div class="dialog-card
-                                mdl-card
-                                mdl-shadow--2dp">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">
-                                Sign Up
-                            </h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                        <?php
-                            $first = $_POST['first'] ?? '';
-                            $last = $_POST['last'] ?? '';
-                            $email = $_POST['email'] ?? '';
-                            $password = $_POST['password'] ?? '';
-                            $agree = $_POST['agree'] ?? '';
-                            $error = False;
-                            if ($first == '') {
-                                echo '<div>Invalid first name.</div>';
-                                $error = True;
-                            }
-                            if ($last == '') {
-                                echo '<div>Invalid last name.</div>';
-                                $error = True;
-                            }
-                            if ($email == '') {
-                                echo '<div>Invalid email address.</div>';
-                                $error = True;
-                            }
-                            if ($password == '') {
-                                echo '<div>Invalid password.</div>';
-                                $error = True;
-                            }
-                            if ($agree == '') {
-                                echo '<div>You must accept the license agreement to continue</div>';
-                                $error = True;
-                            }
-                        ?>
-                        </div>
-                        <center>
-                            <div class="mdl-card__actions">
-                                <form method="post">
-                                    <button class="mdl-button
-                                                   mdl-js-button
-                                                   mdl-js-ripple-effect
-                                                   mdl-button--raised
-                                                   mdl-button--colored"
-                                            type="submit"
-                                            formaction="<?php echo $error ? 'signup.php' : 'get_session.php' ?>">
-                                        <?php echo $error ? 'Back' : 'Next' ?>
-                                    </button>
-                                </form>
-                            </div>
-                        </center>
-                    </div>
-                </div>
-            </div>
-        </main>
+
+<?php
+    include 'include/db.php';
+    $title = "Create User";
+    include 'include/dialog_top.php';
+?>
+
+<div class="mdl-card__supporting-text">
+<?php
+    // Validate the parameters passed to us
+    $first = $_POST['first'] ?? '';
+    $last = $_POST['last'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
+    $agree = $_POST['agree'] ?? '';
+    $error = False;
+    if ($first == '') {
+        echo '<div>Please fill in your first name.</div>';
+        $error = True;
+    }
+    if ($last == '') {
+        echo '<div>Please fill in your last name.</div>';
+        $error = True;
+    }
+    if ($email == '') {
+        echo '<div>Please fill in your email address.</div>';
+        $error = True;
+    }
+    if ($password == '') {
+        echo '<div>Please create a password.</div>';
+        $error = True;
+    }
+    if ($agree == '') {
+        echo '<div>You must accept the license agreement to continue.</div>';
+        $error = True;
+    }
+
+    // Check to see if the email is already in the db
+    $stmt = $conn->prepare('SELECT * FROM user WHERE UPPER(email)=?');
+    $upperEmail = strtoupper($email);
+    $stmt->bindParam(1, $upperEmail);
+    $stmt->execute();
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    if($row) {
+        echo '<div>Email address already in use. Click <a href="forgot.php">here</a> to reset password or click back to enter a different email.</div>';
+        $error = True;
+    }
+
+    //If there isn't an error, go ahead and create the user
+    if (! $error) {
+        $hash = password_hash($password, PASSWORD_BCRYPT);
+        $stmt = $conn->prepare('INSERT INTO user (first, last, email, hash, emailConfirmed) VALUES (?,?,?,?,FALSE);');
+        $stmt->bindParam(1, $first);
+        $stmt->bindParam(2, $last);
+        $stmt->bindParam(3, $email);
+        $stmt->bindParam(4, $hash);
+        $stmt->execute();
+        echo '<div>User created successfully! Click next to continue.</div>';
+    }
+?>
+</div>
+<center>
+    <div class="mdl-card__actions">
+        <form method="post">
+            <!-- Hidden form fields to hold user input incase they need to go back -->
+            <input type="hidden"
+                   id="first"
+                   name="first"
+                   value="<?php echo $first; ?>">
+            <input type="hidden"
+                   id="last"
+                   name="last"
+                   value="<?php echo $last; ?>">
+            <input type="hidden"
+                   id="email"
+                   name="email"
+                   value="<?php echo $email; ?>">
+            <input type="hidden"
+                   id="password"
+                   name="password"
+                   value="<?php echo $password; ?>">
+            <input type="hidden"
+                   id="agree"
+                   name="agree"
+                   value="<?php echo $agree; ?>">
+            <!-- Either a Next or Back button -->
+            <button class="mdl-button
+                           mdl-js-button
+                           mdl-js-ripple-effect
+                           mdl-button--raised
+                           mdl-button--colored"
+                    type="submit"
+                    formaction="<?php echo $error ? 'signup.php' : 'get_session.php' ?>">
+                <?php echo $error ? 'Back' : 'Next' ?>
+            </button>
+        </form>
     </div>
-</body>
-</html>                                        
+</center>
+
+<?php include 'include/dialog_bottom.php'; ?>

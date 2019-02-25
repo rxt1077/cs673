@@ -1,96 +1,80 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <?php require 'include/head.php'; ?>
-    <title>Sign In</title>
-</head>
-<body>
-    <div class='mdl-layout mdl-js-layout'>
-        <main class="mdl-layout__content">
-            <div class="page-content">
-                <!-- Dialog card -->
-                <div class="dialog-container">
-                    <div class="dialog-card
-                                mdl-card
-                                mdl-shadow--2dp">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">
-                                Sign In
-                            </h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <!-- Row one -->
-                            <div class="mdl-grid">
-                                Please enter your email address, password, and click next.
-                            </div>
-                            <!-- Row two -->
-                            <form method="post">
-                                <div class="mdl-grid">
-                                    <!-- Email -->
-                                    <div class="mdl-cell
-                                                mdl-cell--6-col
-                                                mdl-textfield
-                                                mdl-js-textfield
-                                                mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input"
-                                               type="email"
-                                               id="email"
-                                               name="email">
-                                        <label class="mdl-textfield__label"
-                                               for="email">
-                                            Email
-                                        </label>
-                                        <span class="mdl-textfield__error">
-                                            Please enter a valid email address
-                                        </span>
-                                    </div>
-                                    <!-- Password -->
-                                    <div class="mdl-cell
-                                                mdl-cell--6-col
-                                                mdl-textfield
-                                                mdl-js-textfield
-                                                mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input"
-                                               type="password"
-                                               id="password"
-                                               name="password">
-                                        <label class="mdl-textfield__label"
-                                               for="password">
-                                            Password
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- Forgot password link -->
-                                <a href="forgot.php">
-                                    Forgot Password?
-                                </a>
-                                <!-- Form actions -->
-                                <center>
-                                    <div class="mdl-card__actions">
-                                        <button class="mdl-button
-                                                       mdl-js-button
-                                                       mdl-js-ripple-effect"
-                                                formaction="signup.php"
-                                                type="submit">
-                                            Create Account
-                                        </button>
-                                        <button class="mdl-button
-                                                       mdl-js-button
-                                                       mdl-js-ripple-effect
-                                                       mdl-button--raised
-                                                       mdl-button--colored"
-                                                formaction="start_session.php"
-                                                type="submit">
-                                            Next
-                                        </button>
-                                    </div>
-                                </center>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+
+<?php
+    $title="Sign In";
+    include 'include/dialog_top.php';
+?>
+
+<div class="mdl-card__supporting-text">
+    <!-- Row one -->
+    <div class="mdl-grid">
+        Please enter your email address, password, and click next.
     </div>
-</body>
-</html>
+    <!-- Row two -->
+    <form method="post">
+        <div class="mdl-grid">
+            <!-- Email -->
+            <div class="mdl-cell
+                        mdl-cell--6-col
+                        mdl-textfield
+                        mdl-js-textfield
+                        mdl-textfield--floating-label">
+                <input class="mdl-textfield__input"
+                       type="email"
+                       id="email"
+                       name="email"
+                       value="<?php echo $_POST['email'] ?? ''; ?>">
+                <label class="mdl-textfield__label"
+                       for="email">
+                    Email
+                </label>
+                <span class="mdl-textfield__error">
+                    Please enter a valid email address
+                </span>
+            </div>
+            <!-- Password -->
+            <div class="mdl-cell
+                        mdl-cell--6-col
+                        mdl-textfield
+                        mdl-js-textfield
+                        mdl-textfield--floating-label">
+                <input class="mdl-textfield__input"
+                       type="password"
+                       id="password"
+                       name="password"
+                       value="<?php echo $_POST['password'] ?? ''; ?>">
+                <label class="mdl-textfield__label"
+                       for="password">
+                    Password
+                </label>
+            </div>
+        </div>
+        <!-- Forgot password link -->
+        <a href="forgot.php">
+            Forgot Password?
+        </a>
+        <!-- Form actions -->
+        <center>
+            <div class="mdl-card__actions">
+                <button class="mdl-button
+                               mdl-js-button
+                               mdl-js-ripple-effect"
+                        formaction="signup.php"
+                        type="submit">
+                    Create Account
+                </button>
+                <button class="mdl-button
+                               mdl-js-button
+                               mdl-js-ripple-effect
+                               mdl-button--raised
+                               mdl-button--colored"
+                        formaction="get_session.php"
+                        type="submit">
+                    Next
+                </button>
+            </div>
+        </center>
+    </form>
+</div>
+
+<?php include 'include/dialog_bottom.php'; ?>
