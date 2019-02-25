@@ -4,16 +4,17 @@
     include 'include/db.php';
     $title = "Create User";
     include 'include/dialog_top.php';
+    include 'include/post_params.php';
 ?>
 
 <div class="mdl-card__supporting-text">
 <?php
     // Validate the parameters passed to us
-    $first = $_POST['first'] ?? '';
-    $last = $_POST['last'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $password = $_POST['password'] ?? '';
-    $agree = $_POST['agree'] ?? '';
+    $first = getparam("first");
+    $last = getparam("last");
+    $email = getparam("email");
+    $password = getparam("password");
+    $agree = getparam("agree");
     $error = False;
     if ($first == '') {
         echo '<div>Please fill in your first name.</div>';

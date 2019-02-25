@@ -4,6 +4,7 @@
     session_start();    
     $title="Sign In";
     include 'include/dialog_top.php';
+    include 'include/post_params.php';
 ?>
 
 <!-- Messages -->
@@ -11,8 +12,8 @@
 <?php
     include 'include/db.php';
 
-    $email = $_POST['email'] ?? '';
-    $password = $_POST['password'] ?? '';
+    $email = getparam("email");
+    $password = getparam("password");
     $error = False;
     if ($email == '') {
         echo '<div>Please enter an email.</div>';

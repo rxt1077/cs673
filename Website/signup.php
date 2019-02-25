@@ -3,6 +3,7 @@
 <?php
     $title = "Sign Up";
     include 'include/dialog_top.php';
+    include 'include/post_params.php'
 ?>
 
 <div class="mdl-card__supporting-text">
@@ -22,7 +23,7 @@
                        type="text"
                        id="first"
                        name="first"
-                        value="<?php echo $_POST['first'] ?? ''; ?>">
+                       value="<?php printparam("first"); ?>">
                 <label class="mdl-textfield__label"
                        for="first">
                     First Name
@@ -38,7 +39,7 @@
                        type="text"
                        id="last"
                        name="last"
-                        value="<?php echo $_POST['last'] ?? ''; ?>">
+                       value="<?php printparam("last"); ?>">
                 <label class="mdl-textfield__label"
                        for="last">
                     Last Name
@@ -57,7 +58,7 @@
                        type="email"
                        id="email"
                        name="email"
-                       value="<?php echo $_POST['email'] ?? ''; ?>">
+                       value="<?php printparam("email"); ?>">
                 <label class="mdl-textfield__label"
                        for="email">
                     Email Address
@@ -76,7 +77,7 @@
                        type="password"
                        id="password"
                        name="password"
-                       value="<?php echo $_POST['password'] ?? ''; ?>">
+                       value="<?php printparam("password"); ?>">
                 <label class="mdl-textfield__label"
                        for="password">
                     Password
@@ -95,7 +96,7 @@
                        id="agree"
                        class="mdl-checkbox__input"
                        name="agree"
-                       <?php echo (($_POST['agree'] ?? '') == 'on' ? 'checked' : ''); ?>>
+                       <?php echo (getparam("agree")) == 'on' ? 'checked' : ''; ?>>
                 <span class="mdl-checkbox__label">
                     <small>
                         I have read and agree to the <a href="terms.html">terms and conditions</a>

@@ -3,6 +3,7 @@
 <?php
     $title="Sign In";
     include 'include/dialog_top.php';
+    include 'include/post_params.php';
 ?>
 
 <div class="mdl-card__supporting-text">
@@ -23,7 +24,7 @@
                        type="email"
                        id="email"
                        name="email"
-                       value="<?php echo $_POST['email'] ?? ''; ?>">
+                       value="<?php printparam("email"); ?>">
                 <label class="mdl-textfield__label"
                        for="email">
                     Email
@@ -42,7 +43,7 @@
                        type="password"
                        id="password"
                        name="password"
-                       value="<?php echo $_POST['password'] ?? ''; ?>">
+                       value="<?php printparam("password"); ?>">
                 <label class="mdl-textfield__label"
                        for="password">
                     Password
