@@ -8,3 +8,16 @@ CREATE TABLE user (
     emailConfirmed BOOLEAN NOT NULL DEFAULT FALSE,
     PRIMARY KEY (email)
 );
+
+CREATE TABLE portfolio (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE stock (
+    portfolio_id INTEGER NOT NULL,
+    symbol VARCHAR(255), NOT NULL,
+    PRIMARY KEY (portfolio_id, symbol)
+);
