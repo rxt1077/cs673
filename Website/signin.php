@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
 <?php
-    $title="Sign In";
-    include 'include/dialog_top.php';
     include 'include/post_params.php';
+    $title="Sign In";
+    include 'templates/dialog_top.php';
 ?>
 
 <div class="mdl-card__supporting-text">
@@ -78,4 +78,4 @@
     </form>
 </div>
 
-<?php include 'include/dialog_bottom.php'; ?>
+<?php include 'templates/dialog_bottom.php'; ?>

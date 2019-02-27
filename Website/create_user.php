@@ -2,9 +2,9 @@
 
 <?php
     include 'include/db.php';
-    $title = "Create User";
-    include 'include/dialog_top.php';
     include 'include/post_params.php';
+    $title = "Create User";
+    include 'templates/dialog_top.php';
 ?>
 
 <div class="mdl-card__supporting-text">
@@ -99,4 +99,4 @@
     </div>
 </center>
 
-<?php include 'include/dialog_bottom.php'; ?>
+<?php include 'templates/dialog_bottom.php'; ?>

@@ -3,8 +3,8 @@
 <?php
     session_start();    
     $title="Sign In";
-    include 'include/dialog_top.php';
     include 'include/post_params.php';
+    include 'templates/dialog_top.php';
 ?>
 
 <!-- Messages -->
@@ -78,4 +78,4 @@
     </div>
 </center>
 
-<?php include 'include/dialog_bottom.php'; ?>
+<?php include 'templates/dialog_bottom.php'; ?>
