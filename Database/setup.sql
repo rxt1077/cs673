@@ -1,6 +1,6 @@
 USE rxt1077;
 
-CREATE TABLE user (
+CREATE TABLE IF NOT EXISTS user (
     first VARCHAR(255) NOT NULL,
     last VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
@@ -9,15 +9,16 @@ CREATE TABLE user (
     PRIMARY KEY (email)
 );
 
-CREATE TABLE portfolio (
+CREATE TABLE IF NOT EXISTS portfolio (
     id INTEGER NOT NULL AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
 
-CREATE TABLE stock (
+CREATE TABLE IF NOT EXISTS stock (
     portfolio_id INTEGER NOT NULL,
-    symbol VARCHAR(255), NOT NULL,
+    symbol VARCHAR(255) NOT NULL,
+    shares INTEGER NOT NULL,
     PRIMARY KEY (portfolio_id, symbol)
 );

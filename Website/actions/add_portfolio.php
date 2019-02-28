@@ -13,7 +13,7 @@ if ($name != '') {
     $id = $portfolio->getId();
     print_r($id);
     die();
-    $redirect_url .= "?portfolio=$id";
+    $redirect_url .= "?pid=$id";
 }
 header("Location: $redirect_url");
 

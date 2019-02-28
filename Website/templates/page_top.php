@@ -1,25 +1,30 @@
 <?php
     include 'include/check_session.php';
     include 'include/db.php';
+    include 'include/portfolio.php';
 
+    // Use the passed portfolio ID or get their first portfolio
+    // USERS MUST HAVE AT LEAST ONE PORTFOLIO
+    
     if (isset($_GET['pid'])) {
         $pid = $_GET['pid'];
-        $stmt = $conn->prepare('SELECT id, name FROM portfolio WHERE id=? AND email=?;');
+        $stmt = $conn->prepare('SELECT id FROM portfolio WHERE id=? AND email=?;');
         $stmt->bindParam(1, $pid);
         $stmt->bindParam(2, $email);
     } else {
-        $stmt = $conn->prepare('SELECT id, name FROM portfolio WHERE email=?;');
+        $stmt = $conn->prepare('SELECT id FROM portfolio WHERE email=?;');
         $stmt->bindParam(1, $email);
     }
-
     $stmt->execute();
     $results = $stmt->fetch(PDO::FETCH_ASSOC);
     $pid = $results['id'];
     if (! isset($pid)) {
-        die("Unable to look up portfolio");
+        die("Invalid portfolio");
     }
-    $title = $results['name'];
-    $page = basename($_SERVER['PHP_SELF']);
+    
+    $portfolio = new Portfolio($conn);
+    $portfolio->load($pid);
+    $title = $portfolio->getName();
 ?>
 <html>
 <head>
@@ -49,30 +54,6 @@
                     </span>
                 </nav>
             </div>
-            <!-- Tabs -->
-            <div class="mdl-layout__tab-bar
-                        mdl-js-ripple-effect">
-                <a href="overview.php?pid=<?php echo $pid; ?>"
-                   class="mdl-layout__tab
-                          <?php echo ($page == 'overview.php') ? 'is-active' : ''; ?>">
-                    Overview
-                </a>
-                <a href="buy.php?pid=<?php echo $pid; ?>"
-                   class="mdl-layout__tab
-                          <?php echo ($page == 'buy.php') ? 'is-active' : ''; ?>">
-                    Buy
-                </a>
-                <a href="sell.php?pid=<?php echo $pid; ?>"
-                   class="mdl-layout__tab
-                          <?php echo ($page == 'sell.php') ? 'is-active' : ''; ?>">
-                    Sell
-                </a>
-                <a href="order.php?pid=<?php echo $pid; ?>"
-                   class="mdl-layout__tab
-                          <?php echo ($page == 'order.php') ? 'is-active' : ''; ?>">
-                    Order
-                </a>
-            </div>
         </header>
 
         <!-- Drawer -->
@@ -88,9 +69,9 @@
                 $stmt->bindParam(1, $email);
                 $stmt->execute();
                 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                foreach ($results as $portfolio) {
-                    $name = $portfolio['name'];
-                    $id = $portfolio['id'];
+                foreach ($results as $result) {
+                    $name = $result['name'];
+                    $id = $result['id'];
                     echo "<a class=mdl-navigation__link href='overview.php?p=$id'>$name</a>";
                 }
                 
