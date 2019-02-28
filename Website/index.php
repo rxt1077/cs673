@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <?php include 'templates/page_top.php'; ?>
 
 <div>Overview View</div>

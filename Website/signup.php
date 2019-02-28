@@ -2,7 +2,7 @@
 
 <?php
     $title = "Sign Up";
-    include 'include/post_params.php'
+    include 'include/post_params.php';
     include 'templates/dialog_top.php';
 ?>
 

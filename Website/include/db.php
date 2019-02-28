@@ -1,4 +1,4 @@
- <?php
+<?php
 $servername = "127.0.0.1";
 $username = "rxt1077";
 $password = "5E5YTaRZW";

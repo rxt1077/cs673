@@ -57,6 +57,11 @@
         $stmt->bindParam(3, $email);
         $stmt->bindParam(4, $hash);
         $stmt->execute();
+        $stmt = $conn->prepare('INSERT INTO portfolio (name, email) VALUES (?,?);');
+        $portfolio_name = "Default Portfolio";
+        $stmt->bindParam(1, $portfolio_name);
+        $stmt->bindParam(2, $email);
+        $stmt->execute();
         echo '<div>User created successfully! Click next to continue.</div>';
     }
 ?>

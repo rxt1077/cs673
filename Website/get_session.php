@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <?php
     session_start();    
     $title="Sign In";

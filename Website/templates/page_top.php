@@ -72,7 +72,7 @@
                 foreach ($results as $result) {
                     $name = $result['name'];
                     $id = $result['id'];
-                    echo "<a class=mdl-navigation__link href='overview.php?p=$id'>$name</a>";
+                    echo "<a class=mdl-navigation__link href='index.php?p=$id'>$name</a>";
                 }
                 
                 ?>
