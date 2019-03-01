@@ -1,15 +1,15 @@
 <?php
+    include '../config.php';
     session_start();    
-    $title="Sign In";
-    include 'include/post_params.php';
-    include 'templates/dialog_top.php';
+    $title='Sign In';
+    include "include/post_params.php";
+    include "include/db.php";
+    include "templates/dialog_top.php";
 ?>
 
 <!-- Messages -->
 <div class="mdl-card__supporting-text">
 <?php
-    include 'include/db.php';
-
     $email = getparam("email");
     $password = getparam("password");
     $error = False;
@@ -35,8 +35,8 @@
         } else if (password_verify($password, $row['hash'])) {
             // set session and redirect
             $_SESSION['email'] = $row['email'];
-            echo '<div>Sign in successful! Redirecting to <a href="index.php">main page</a>.</div>';
-            echo '<meta http-equiv="refresh" content="0;url=index.php">';
+            echo "<div>Sign in successful! Redirecting to <a href='$basedir/index.php'>main page</a>.</div>";
+            echo "<meta http-equiv='refresh' content='0;url=$basedir/index.php'>";
         } else {
             echo '<div>Invalid password.</div>';
             $password = '';
@@ -49,7 +49,7 @@
 <center>
     <div class="mdl-card__actions">
         <form method="post">
-            <!-- Hidden form fields to hold suer input in case they need to go back -->
+            <!-- Hidden form fields to hold user input in case they need to go back -->
             <input type="hidden"
                    id="email"
                    name="email"
@@ -61,19 +61,19 @@
             <?php
                 // Only show the back button if there is an error
                 if ($error) {
-                    echo '<button class="mdl-button
+                    echo "<button class='mdl-button
                                          mdl-js-button
                                          mdl-js-ripple-effect
                                          mdl-button--raised
-                                         mdl-button--colored"
-                                  formaction="signin.php"
-                                  type="submit">
+                                         mdl-button--colored'
+                                  formaction='$basedir/signin.php'
+                                  type='submit'>
                               Back
-                          </button>';
+                          </button>";
                 }
             ?>
         </form>
     </div>
 </center>
 
-<?php include 'templates/dialog_bottom.php'; ?>
+<?php include "templates/dialog_bottom.php"; ?>

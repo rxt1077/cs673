@@ -1,12 +1,22 @@
-<?php include 'templates/page_top.php'; ?>
+<?php
+    include 'config.php'; 
+    include 'templates/page_top.php';
+?>
 
-<div>Overview View</div>
-<div>List the cash balance</div>
-<div>List the value of the portfolio</div>
 <div>List all of the stocks and their current value</div>
 <div>List all of the transactions</div>
 <script src="js/autocomplete.js"></script>
 <script src="js/symbols.js"></script>
+<div class="mdl-grid">
+    <div class="mdl-cell
+                mdl-cell--6-col">
+        <h4>Portfolio Value:</h4>
+    </div>
+    <div class="mdl-cell
+                mdl-cell--6-col">
+        <h4>Available Funds: <?php $portfolio->printCash(); ?></h4>
+    </div>
+</div>
 <div class="mdl-grid">
     <!-- Buy -->
     <div class="mdl-cell
@@ -95,17 +105,28 @@
                        id="file_text"
                        readonly>
             </div>
-                <div class="mdl-button
-                            mdl-button-mini--fab
-                            mdl-button--file">
-                    <i class="material-icons">attach_file</i>
-                    <input type="file"
-                           name="file"
-                           id="file"
-                           onchange="document.getElementById('file_text').value=this.files[0].name;">
-                </div>
+            <div class="mdl-button
+                        mdl-js-button
+                        mdl-button-mini--fab
+                        mdl-js-ripple-effect
+                        mdl-button--colored
+                        mdl-button--file">
+                <i class="material-icons">attach_file</i>
+                <input type="file"
+                       name="file"
+                       id="file"
+                       onchange="document.getElementById('file_text').value=this.files[0].name;">
+            </div>
+            <button type="submit"
+                    class="mdl-button
+                           mdl-js-button
+                           mdl-button-mini--fab
+                           mdl-js-ripple-effect
+                           mdl-button--colored">
+                <i class="material-icons">send</i>
+            </button>
         </form>
     </div>
 </div>
 
-<?php include 'templates/page_bottom.php'; ?>
+<?php include "templates/page_bottom.php"; ?>

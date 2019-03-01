@@ -21,7 +21,7 @@
 }
 
 .mdl-navigation__link .mdl-textfield {
-    width: 75%;
+    width: 77%;
 }
 
 .mdl-cell form {
@@ -86,4 +86,8 @@
 
 .mdl-textfield--file .mdl-button--file {
     right: 0;
+}
+
+.float-right {
+    float: right;
 }

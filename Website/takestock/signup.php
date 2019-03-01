@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-
 <?php
-    $title = "Sign Up";
+    include 'config.php';
+    $title = 'Sign Up';
     include 'include/post_params.php';
     include 'templates/dialog_top.php';
 ?>
@@ -112,7 +111,7 @@
                                mdl-js-ripple-effect
                                mdl-button--raised
                                mdl-button--colored"
-                        formaction="create_user.php"
+                        formaction="actions/create_user.php"
                         type="submit">
                     Next
                 </button>

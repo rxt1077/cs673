@@ -1,6 +1,6 @@
 <html>
 <head>
-    <?php include 'include/head.php'; ?>
+    <?php include 'templates/head.php'; ?>
 </head>
 <body>
     <div class='mdl-layout

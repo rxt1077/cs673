@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-
 <?php
+    include '../config.php';
     include 'include/db.php';
     include 'include/post_params.php';
-    $title = "Create User";
+    include 'include/portfolio.php';
+    $title = 'Create User';
     include 'templates/dialog_top.php';
 ?>
 
@@ -44,7 +44,7 @@
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     if($row) {
-        echo '<div>Email address already in use. Click <a href="forgot.php">here</a> to reset password or click back to enter a different email.</div>';
+        echo '<div>Email address already in use. Click <a href="../forgot.php">here</a> to reset password or click back to enter a different email.</div>';
         $error = True;
     }
 
@@ -57,11 +57,8 @@
         $stmt->bindParam(3, $email);
         $stmt->bindParam(4, $hash);
         $stmt->execute();
-        $stmt = $conn->prepare('INSERT INTO portfolio (name, email) VALUES (?,?);');
-        $portfolio_name = "Default Portfolio";
-        $stmt->bindParam(1, $portfolio_name);
-        $stmt->bindParam(2, $email);
-        $stmt->execute();
+        $portfolio = new Portfolio($conn);
+        $portfolio->create("Default Portfolio", $email);
         echo '<div>User created successfully! Click next to continue.</div>';
     }
 ?>
@@ -97,11 +94,11 @@
                            mdl-button--raised
                            mdl-button--colored"
                     type="submit"
-                    formaction="<?php echo $error ? 'signup.php' : 'get_session.php' ?>">
+                    formaction="<?php echo $error ? "$basedir/signup.php" : "$basedir/actions/get_session.php" ?>">
                 <?php echo $error ? 'Back' : 'Next' ?>
             </button>
         </form>
     </div>
 </center>
 
-<?php include 'templates/dialog_bottom.php'; ?>
+<?php include "templates/dialog_bottom.php"; ?>

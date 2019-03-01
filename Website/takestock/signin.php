@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-
 <?php
+    include 'config.php';
     include 'include/post_params.php';
-    $title="Sign In";
+    $title='Sign In';
     include 'templates/dialog_top.php';
 ?>
 
@@ -69,7 +68,7 @@
                                mdl-js-ripple-effect
                                mdl-button--raised
                                mdl-button--colored"
-                        formaction="get_session.php"
+                        formaction="actions/get_session.php"
                         type="submit">
                     Next
                 </button>
