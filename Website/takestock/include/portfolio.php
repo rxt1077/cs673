@@ -6,6 +6,7 @@ class Portfolio {
     private $name;
     private $stocks;
     private $cash;
+    private $email;
 
     // needs the database connection
     function __construct($conn) {
@@ -24,9 +25,10 @@ class Portfolio {
         $this->id = $result['id'];
         $this->stocks = array();
         $this->cash = 0.00;
+        $this->email = $email;
     }
 
-    // loads the portfolio info from a pid
+    // loads the portfolio info for a pid 
     public function load($pid) {
         $stmt = $this->conn->prepare('SELECT * FROM portfolio WHERE id=?;');
         $stmt->bindParam(1, $pid);
@@ -35,6 +37,7 @@ class Portfolio {
         $this->id = $results['id'];
         $this->name = $results['name'];
         $this->cash = $results['cash'];
+        $this->email = $results['email'];
         $stmt = $this->conn->prepare('SELECT symbol FROM stock WHERE portfolio_id=?;');
         $stmt->bindParam(1, $pid);
         $stmt->execute();
@@ -111,6 +114,32 @@ class Portfolio {
         } else {
             return false;
         }
+    }
+
+    // determines whether an email address owns a portfolio
+    public function isOwner($email) {
+        if ($this->email == $email) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // deletes this portfolio from the db
+    public function delete() {
+        $stmt = $this->conn->prepare('DELETE FROM portfolio WHERE id=?;');
+        $stmt->bindParam(1, $this->id);
+        $stmt->execute();
+    }
+
+    // returns true if this is a user's only portfolio
+    public function isOnly() {
+        $stmt = $this->conn->prepare('SELECT id FROM portfolio WHERE id<>? AND email=?;');
+        $stmt->bindParam(1, $this->id);
+        $stmt->bindParam(2, $this->email);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return ! isset($result['id']); 
     }
 }
 

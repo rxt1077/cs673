@@ -8,22 +8,21 @@
     
     if (isset($_GET['pid'])) {
         $pid = $_GET['pid'];
-        $stmt = $conn->prepare('SELECT id FROM portfolio WHERE id=? AND email=?;');
-        $stmt->bindParam(1, $pid);
-        $stmt->bindParam(2, $email);
     } else {
         $stmt = $conn->prepare('SELECT id FROM portfolio WHERE email=?;');
         $stmt->bindParam(1, $email);
+        $stmt->execute();
+        $results = $stmt->fetch(PDO::FETCH_ASSOC);
+        $pid = $results['id'];
+        if (! isset($pid)) {
+            die("Can't find a portfolio for $email");
+        }
     }
-    $stmt->execute();
-    $results = $stmt->fetch(PDO::FETCH_ASSOC);
-    $pid = $results['id'];
-    if (! isset($pid)) {
-        die("Invalid portfolio");
-    }
-    
     $portfolio = new Portfolio($conn);
     $portfolio->load($pid);
+    if (! $portfolio->isOwner($email)) {
+        die("$email is not the owner of portfolio id $pid");
+    }
     $title = $portfolio->getName();
 ?>
 <html>
@@ -76,8 +75,10 @@
                     $name = $current_portfolio->getName();
                     echo "<div class='mdl-navigation__link'>";
                     echo "    <a href='index.php?pid=$id'>$name</a>";
-                    // if a portfolio is empty, add the delete button
-                    if ($current_portfolio->isEmpty()) {
+                    // if a portfolio is empty and isn't the only one, add the
+                    // delete button
+                    if ($current_portfolio->isEmpty() and
+                       (! $current_portfolio->isOnly())) {
                         echo "<span class='float-right'>";
                         echo "    <form action='actions/delete_portfolio.php' method='get'>";
                         echo "        <input type='hidden' name='pid' value='$id'>"; 
