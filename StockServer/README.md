@@ -1,8 +1,7 @@
 # StockServer
 
-This is a multithreaded server for fetching stock prices from Yahoo Finance. It
-uses a pool of connections to connect to Yahoo Finance in parallel and download
-stock data. It uses [jsoup](https://jsoup.org) to scrape the response. 
+This is a multithreaded server for fetching stock prices. It maintains a hash
+of the Dow 30 and Nifty 50 by periodically web-scraping finance sites.
 
 ## Requirements
 
@@ -20,7 +19,3 @@ The following errors may be output by the server
 
 * `ERROR Invalid Input` - This occurs if the submitted string cannot be
 interpreted at all.
-* `ERROR Invalid Date (yyyy-MM-dd)` - This occurs if the submitted date is not
-in ISO 8601 format.
-* `ERROR Unable to connect to Yahoo Finance`
-* `ERROR Unable to parse response`

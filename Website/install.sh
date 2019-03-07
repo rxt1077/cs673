@@ -5,5 +5,5 @@
 rm -r ~/public_html/takestock
 cp -r takestock ~/public_html/takestock
 
-sed -i s/127.0.0.1/sql.njit.edu/ ~/public_html/include/db.php
-sed -i s/    $basedir =.*/    $basedir = \"/\~rxt1077/takestock\"/ ~/public_html/config.php
+sed "s/.*\$servername.*=.*/\$servername = 'sql.njit.edu';/" takestock/include/db.php > ~/public_html/takestock/include/db.php
+sed "s/.*\$basedir.*=.*/    \$basdir = '\/~rxt1077\/takestock';/" takestock/config.php > ~/public_html/takestock/config.php

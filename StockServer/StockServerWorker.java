@@ -3,65 +3,48 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
-import java.util.concurrent.Future;
-import java.lang.InterruptedException;
-import java.util.concurrent.ExecutionException;
-import java.util.Date;
-import java.util.List;
-import java.util.ArrayList;
-import java.math.BigDecimal;
+import java.io.PrintWriter;
 import java.net.Socket;
 
-/* A worker thread to fetch stock prices */
+/* A worker thread to deal with a client */
 public class StockServerWorker implements Runnable {
 
-        int poll_interval = 250; /* how long to wait between checking data */
-        int timeout = 1000; /* how long to wait until closing connection */
-
         Socket clientSocket = null;
+        StockPrices prices;
 
-        public StockServerWorker(Socket clientSocket) {
+        public StockServerWorker(Socket clientSocket, StockPrices prices) {
             this.clientSocket = clientSocket;
+            this.prices = prices;
         }
 
         /* Reads input from the socket, parses it, performs a price lookups and
            returns the results */
         public void run() {
-            String line, symbol, userInput[];
+            String inputLine, outputLine, userInput[];
             BufferedReader input;
-            Date date;
-            PriceFetcher fetcher = new PriceFetcher();
-            List<Future> futures = new ArrayList<Future>();
-            int inactive = 0;
+            PrintWriter output;
 
             System.out.println("Worker thread starting...");
             try {
                 input = new BufferedReader(new InputStreamReader(
                     clientSocket.getInputStream()));
-                
-                while (true) {
-                    /* if we have input available read it */
-                    if (input.ready()) {
-                        inactive = 0;
-                        line = input.readLine();
-                        System.out.printf("Input: %s\n", line);
-                        futures.add(fetcher.getPrice(line));
-                    /* if we have tasks complete print them */
-                    } else if ((futures.size() > 0) && futures.get(0).isDone()) {
-                        inactive = 0;
-                        System.out.printf("Output: %s\n", futures.get(0).get());
-                        futures.remove(0);
-                    /* if there are no waiting futures and we've timed out */
-                    } else if ((futures.size() == 0) && (inactive >= timeout)) {
-                        break; 
-                    /* wait */
+                output = new PrintWriter(clientSocket.getOutputStream(), true);
+                while ((inputLine = input.readLine()) != null) {
+                    System.out.printf("Input: %s\n", inputLine);
+
+                    /* Parse the input and make sure it's valid */
+                    /* The data is bogus, it's not really needed */
+                    userInput = inputLine.split(",");
+                    if (userInput.length != 2) {
+                        outputLine = "ERROR Invalid Input";
                     } else {
-                        Thread.sleep(poll_interval);
-                        inactive += poll_interval;
+                        outputLine = prices.get(userInput[0]);
                     }
+                    output.println(outputLine);
                 }
                 input.close();
-            } catch (IOException | InterruptedException | ExecutionException e) {
+                output.close();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
             System.out.println("Worker thread exiting...");

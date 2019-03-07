@@ -1,3 +1,3 @@
-# Compile fetcher with the local jsoup dependency
+# Compile StockServer
 
-javac -cp  jsoup-1.11.3.jar StockServerWorker.java StockServer.java PriceFetcher.java Main.java
+javac StockServerWorker.java StockServer.java StockPrices.java Main.java
