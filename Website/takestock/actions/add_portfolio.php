@@ -1,10 +1,10 @@
 <?php
 
 include '../config.php';
-include "include/check_session.php";
-include "include/post_params.php";
-include "include/db.php";
-include "include/portfolio.php";
+include 'include/check_session.php';
+include 'include/post_params.php';
+include 'include/db.php';
+include 'include/portfolio.php';
 
 $redirect_url = "$basedir/index.php";
 $name = getparam('new_portfolio');

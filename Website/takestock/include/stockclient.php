@@ -19,10 +19,11 @@ class StockClient {
         $response = socket_read($this->socket, 32);
         $parts = explode(',', $response);
         if ($parts[0] == 'USD') {
-            return $parts[1];
+            return (float)$parts[1];
         }
         if ($parts[0] == 'INR') {
             // TODO: convert and return
+            return;
         }
     }
 }

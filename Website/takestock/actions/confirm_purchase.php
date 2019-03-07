@@ -16,20 +16,36 @@
         die("Invalid portfolio");
     }
 
-    // Make sure a stock symbol was passed
+    // Make sure a valid stock symbol was passed
     if (! isset($_GET['symbol'])) {
         die("No stock symbol specified");
     }
     $symbol = $_GET['symbol'];
+    if ($symbol == '') {
+        header("Location: $basedir/index.php?pid=$pid");
+    }
 
     // Setup a connection to StockServer
     $client = new StockClient();
+
+    // Get our quote and store it in the DB so we can confirm later on if they
+    // choose to buy (it's auto-timestamped). You can't trust the client to
+    // pass this correctly
+    $price = $client->getQuoteUSD($symbol);
+    $stmt = $conn->prepare('INSERT INTO quote (email, symbol, price) VALUES (?, ?, ?);');
+    $stmt->bindParam(1, $email);
+    $stmt->bindParam(2, $symbol);
+    $stmt->bindParam(3, $price);
+    $stmt->execute();
 
     $title = 'Confirm Purchase';
     include 'templates/dialog_top.php';
 ?>
 
 <form method="post">
+    <!-- Hidden fields for portfolio_id and stock symbol -->
+    <input type="hidden" name="symbol" value="<?php echo $symbol; ?>">
+    <input type="hidden" name="pid" value="<?php echo $pid; ?>">
     <div class="mdl-card__supporting-text">
         <!-- First row -->
         <div class="mdl-grid">
@@ -50,7 +66,6 @@
         <!-- Second row -->
         <div class="mdl-grid">
             <?php
-                $price = $client->getQuoteUSD($symbol);
                 if ($portfolio->getCash() == 0.00) {
                     $max = 0;
                 } else {
@@ -59,7 +74,7 @@
             ?>
             <div class="mdl-cell
                         mdl-cell--6-col">
-                <h5><?php echo "$symbol/share: \$$price"; ?></h5>
+                <h5><?php echo "$symbol/share: " . money_format("$%n", $price); ?></h5>
             </div>
             <div class="mdl-cell
                         mdl-cell--6-col">
@@ -96,7 +111,7 @@
                         type="range"
                         min="0"
                         max="<?php echo $max; ?>"
-                        value="1"
+                        value="0"
                         step="1"
                         tabindex="0"
                         oninput="updateSlider(this.value)"

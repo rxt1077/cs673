@@ -2,7 +2,7 @@
 
 # Deploys website on AFS
 rm -r ~/public_html/takestock
-cp -r takestock ~/public_html/takestock
+cp -r takestock ~/public_html/
 
 # Setup the config files
 rm ~/public_html/takestock/config.php*
