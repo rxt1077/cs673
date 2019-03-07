@@ -5,8 +5,10 @@
 
 <div>List all of the stocks and their current value</div>
 <div>List all of the transactions</div>
-<script src="js/autocomplete.js"></script>
-<script src="js/symbols.js"></script>
+<?php
+echo "<script src='$basedir/js/autocomplete.js'></script>";
+echo "<script src='$basedir/js/symbols.js'></script>";
+?>
 <div class="mdl-grid">
     <div class="mdl-cell
                 mdl-cell--6-col">
@@ -22,7 +24,7 @@
     <div class="mdl-cell
                 mdl-cell--4-col">
         <form autocomplete="off"
-              action="actions/buy_stock.php"
+              action='<?php echo "$basedir/actions/confirm_purchase.php"; ?>' 
               method="get">
             <input type="hidden"
                    name="pid"
@@ -42,7 +44,7 @@
             </div>
             <button class="mdl-button
                            mdl-js-button
-                           mdl-button-mini--fab
+                           mdl-button--icon
                            mdl-js-ripple-effect
                            mdl-button--colored">
                 <i class="material-icons">add</i>
@@ -76,7 +78,7 @@
             </div>
             <button class="mdl-button
                            mdl-js-button
-                           mdl-button-mini--fab
+                           mdl-button--icon
                            mdl-js-ripple-effect
                            mdl-button--colored">
                 <i class="material-icons">remove</i>
@@ -107,7 +109,7 @@
             </div>
             <div class="mdl-button
                         mdl-js-button
-                        mdl-button-mini--fab
+                        mdl-button--icon
                         mdl-js-ripple-effect
                         mdl-button--colored
                         mdl-button--file">
@@ -120,7 +122,7 @@
             <button type="submit"
                     class="mdl-button
                            mdl-js-button
-                           mdl-button-mini--fab
+                           mdl-button--icon
                            mdl-js-ripple-effect
                            mdl-button--colored">
                 <i class="material-icons">send</i>

@@ -40,6 +40,7 @@ public class StockServerWorker implements Runnable {
                     } else {
                         outputLine = prices.get(userInput[0]);
                     }
+                    System.out.printf("Output: %s\n", outputLine);
                     output.println(outputLine);
                 }
                 input.close();

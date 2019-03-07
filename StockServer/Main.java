@@ -1,7 +1,7 @@
 class Main {
     public static void main(String args[]) {
 
-        int port = 8080;
+        int port = 9090;
 
         System.out.printf("Running StockServer on port %d.\n", port);
         StockServer server = new StockServer(port);

@@ -25,6 +25,7 @@
     }
     $title = $portfolio->getName();
 ?>
+<!doctype HTML>
 <html>
 <head>
     <?php
