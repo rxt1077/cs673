@@ -2,13 +2,11 @@
 
 //Basic client to interface with StockServer
 class StockClient {
-    private $port = 9090;
-    private $address = "localhost";
     private $socket;
 
-    function __construct() {
+    function __construct($address, $port) {
         $this->socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
-        socket_connect($this->socket, $this->address, $this->port);
+        socket_connect($this->socket, $address, $port);
     }
 
     // gets a quote for a single symbol in USD

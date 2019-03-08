@@ -34,8 +34,13 @@
         header("Location: $basedir/index.php?pid=$pid");
     }
 
-    // Setup a connection to StockServer
-    $client = new StockClient();
+    // Set up a connection to StockServer
+    $client = new StockClient($stockserver_address, $stockserver_port);
+
+    // Delete all previous quotes for this user
+    $stmt = $conn->prepare('DELETE FROM quote WHERE email=?;');
+    $stmt->bindParam(1, $email);
+    $stmt->execute();
 
     // Get our quote and store it in the DB so we can confirm later on if they
     // choose to buy (it's auto-timestamped). You can't trust the client to
@@ -60,6 +65,7 @@
     <!-- Hidden fields for portfolio_id and stock symbol -->
     <input type="hidden" name="symbol" value="<?php echo $symbol; ?>">
     <input type="hidden" name="pid" value="<?php echo $pid; ?>">
+    <input type="hidden" name="action" value="<?php echo $action; ?>">
     <div class="mdl-card__supporting-text">
         <!-- First row -->
         <div class="mdl-grid">
@@ -87,6 +93,7 @@
                         $max = floor($portfolio->getCash() / $price);
                     }
                 } else {
+                    $max = $portfolio->getShares($symbol);
                 }
             ?>
             <div class="mdl-cell
@@ -145,7 +152,7 @@
                            mdl-button--raised
                            mdl-button--colored"
                     type="submit"
-                    formaction="<?php echo $action ? 'buy_stock.php' : 'sell_stock.php'; ?>">
+                    formaction="trade_stock.php">
                 Confirm
             </button>
         </div>

@@ -6,6 +6,12 @@
     include 'include/post_params.php';
     include 'include/portfolio.php';
 
+    // Make sure they specified an action
+    $action = getparam('action');
+    if (($action != 'buy') and ($action != 'sell')) {
+        die("No action specified");
+    }
+
     // Make sure there is a symbol and the quote is valid
     $symbol = getparam('symbol');
     if ($symbol == '') {
@@ -47,13 +53,23 @@ EOD;
         die("Shares amount not specified.");
     }
 
-    // Make sure they have enough money
-    if (($shares * $price) > $portfolio->getCash()) {
-        die("Insufficient funds.");
-    }
+    if ($action == 'buy') {
+        // Make sure they have enough money
+        if (($shares * $price) > $portfolio->getCash()) {
+            die("Insufficient funds.");
+        }
 
-    // Put the stock in the portfolio and save it
-    $portfolio->buyStock($symbol, $shares, $price);
+        // Put the stock in the portfolio and save it
+        $portfolio->buyStock($symbol, $shares, $price);
+    } else {
+        // Make sure they have enough shares
+        if ($shares > $portfolio->getShares($symbol)) {
+            die("Not enough shares for trade.");
+        }
+
+        // Remove the stock from the portfolio and save it
+        $portfolio->sellStock($symbol, $shares, $price);
+    }
     $portfolio->save();
 
     // redirect back to main page

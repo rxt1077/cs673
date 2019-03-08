@@ -1,24 +1,76 @@
 <?php
-    include 'config.php'; 
+    include 'config.php';
+    include 'include/stockclient.php';
+    $client = new StockClient($stockserver_address, $stockserver_port);    
     include 'templates/page_top.php';
 ?>
 
-<div>List all of the stocks and their current value</div>
-<div>List all of the transactions</div>
+<div>TODO: List all of the transactions</div>
+<div>TODO: Orders workflow</div>
+<div>TODO: Allow renaming portfolio</div>
+
 <?php
 echo "<script src='$basedir/js/autocomplete.js'></script>";
 echo "<script src='$basedir/js/symbols.js'></script>";
 ?>
+<!-- General information about portfolio -->
 <div class="mdl-grid">
     <div class="mdl-cell
-                mdl-cell--6-col">
-        <h4>Portfolio Value:</h4>
-    </div>
-    <div class="mdl-cell
-                mdl-cell--6-col">
-        <h4>Available Funds: <?php $portfolio->printCash(); ?></h4>
+                mdl-cell--12-col">
+        <h5>Available Funds: <?php $portfolio->printCash(); ?></h5>
     </div>
 </div>
+<!-- Portfolio contents and value -->
+<div class="mdl-grid">
+    <div class="mdl-cell
+                mdl-cell--12-col">
+        <table class="mdl-data-table
+                      mdl-js-data-table
+                      mdl-shadow--2dp
+                      stock-table">
+            <thead class="stock-table">
+                <tr>
+                    <th class="mdl-data-table__cell--non-numeric">Symbol</th>
+                    <th>Shares</th>
+                    <th>Price/Share</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+                $total = 0.00;
+                foreach ($portfolio->getStocks() as $stock) {
+                    $symbol = $stock['symbol'];
+                    $shares = $stock['shares'];
+                    $price = $client->getQuoteUSD($symbol);
+                    $price_output = money_format("$%n", $price);
+                    $value = $shares * $price;
+                    $value_output = money_format("$%n", $value);
+                    $total += $value;
+                    echo '<tr>';
+                    echo "    <td class='mdl-data-table__cell--non-numeric'>$symbol</td>";
+                    echo "    <td>$shares</td>";
+                    echo "    <td>$price_output</td>";
+                    echo "    <td>$value_output</td>";
+                    echo '</tr>';
+                }                    
+            ?>
+            </tbody>
+            <tfoot class="stock-table">
+                <tr>
+                    <th class="mdl-data-table__cell--non-numeric">Total</th>
+                    <td></td>
+                    <td></td>
+                    <?php
+                        $total_output = money_format("$%n", $total);
+                        echo "<td>$total_output</td>";
+                    ?>
+                </tr>
+            </tfoot>                   
+        </table>
+    </div>
+</div>
+<!-- Portfolio actions -->
 <div class="mdl-grid">
     <!-- Buy -->
     <div class="mdl-cell
@@ -98,11 +150,15 @@ echo "<script src='$basedir/js/symbols.js'></script>";
     <div class="mdl-cell
                 mdl-cell-4-col">
         <form autocomplete="off"
-              action="actions/order.php"
+              enctype="multipart/form-data"
+              action='<?php echo "$basedir/actions/order.php"; ?>'
               method="post">
             <input type="hidden"
                    name="pid"
                    value="<?php echo $pid; ?>">
+            <input type="hidden"
+                   name="MAX_FILE_SIZE"
+                   value="30000">
             <span class="mdl-typography--title">Order</span>
             <div class="mdl-textfield
                         mdl-js-textfield

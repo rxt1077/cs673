@@ -38,7 +38,7 @@ class Portfolio {
         $this->name = $results['name'];
         $this->cash = $results['cash'];
         $this->email = $results['email'];
-        $stmt = $this->conn->prepare('SELECT symbol FROM stock WHERE portfolio_id=?;');
+        $stmt = $this->conn->prepare('SELECT * FROM stock WHERE portfolio_id=?;');
         $stmt->bindParam(1, $pid);
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -87,6 +87,15 @@ class Portfolio {
     public function getStocks() {
         return $this->stocks;
     }
+
+    // returns the amount of shares for a specific stock
+    public function getShares($symbol) {
+        foreach ($this->stocks as $stock) {
+            if ($stock['symbol'] == $symbol) {
+                return $stock['shares'];
+            }
+        }
+    }        
 
     // returns the cash in this portfolio
     public function getCash() {
@@ -150,17 +159,37 @@ class Portfolio {
         // if they already have some of the stock, add to it 
         $size = count($this->stocks); 
         for ($i = 0; $i < $size; $i++) {
-            if ($stock[i]['symbol'] == $symbol)
-                break;
+            if ($this->stocks[$i]['symbol'] == $symbol) {
+                $this->stocks[$i]['shares'] += $shares;
+                return;
+            }
         }
-        if ($i != $size) {
-            $this->stocks[$i]['shares'] += $shares;
-        } else { // otherwise create a new element in the stocks array
-            $stock = array();
-            $stock['portfolio_id'] = $this->id;
-            $stock['symbol'] = $symbol;
-            $stock['shares'] = $shares;
-            array_push($this->stocks, $stock);
+
+        // otherwise add a new element to the stocks array
+        $stock = array();
+        $stock['portfolio_id'] = $this->id;
+        $stock['symbol'] = $symbol;
+        $stock['shares'] = $shares;
+        array_push($this->stocks, $stock);
+        sort($this->stocks);
+    }
+
+    // removes a stock from the stock array and adds the sale value to cash
+    public function sellStock($symbol, $shares, $price) {
+        // Add the cash back into the portfolio
+        $this->cash += $shares * $price;
+
+        // Find the stock and adjust the shares
+        $size = count($this->stocks); 
+        for ($i = 0; $i < $size; $i++) {
+            if ($this->stocks[$i]['symbol'] == $symbol) {
+                $this->stocks[$i]['shares'] -= $shares;
+                // if they don't have any shares left, pull it from the array
+                if ($this->stocks[$i]['shares'] <= 0) {
+                    unset($this->stocks[$i]);
+                }
+                return;
+            }
         }
     }
 }
