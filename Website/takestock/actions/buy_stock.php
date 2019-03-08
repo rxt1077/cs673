@@ -41,11 +41,22 @@ EOD;
         die("Invalid portfolio");
     }
 
+    // Make sure they specified how many shares
     $shares= getparam('shares');
     if ($shares == '') {
         die("Shares amount not specified.");
     }
 
-    echo "$shares of $symbol at $price";
+    // Make sure they have enough money
+    if (($shares * $price) > $portfolio->getCash()) {
+        die("Insufficient funds.");
+    }
+
+    // Put the stock in the portfolio and save it
+    $portfolio->buyStock($symbol, $shares, $price);
+    $portfolio->save();
+
+    // redirect back to main page
+    header("Location: $basedir/index.php");
 
 ?>

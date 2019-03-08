@@ -41,7 +41,7 @@ class Portfolio {
         $stmt = $this->conn->prepare('SELECT symbol FROM stock WHERE portfolio_id=?;');
         $stmt->bindParam(1, $pid);
         $stmt->execute();
-        $results = $stmt->fetch(PDO::FETCH_ASSOC);
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if ($results) {
             $this->stocks = $results;
         } else {
@@ -140,6 +140,28 @@ class Portfolio {
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return ! isset($result['id']); 
+    }
+
+    // adds a stock to the stock array and subtracts the cost from cash
+    public function buyStock($symbol, $shares, $price) {
+        // pay for the stock
+        $this->cash -= $price * $shares;
+     
+        // if they already have some of the stock, add to it 
+        $size = count($this->stocks); 
+        for ($i = 0; $i < $size; $i++) {
+            if ($stock[i]['symbol'] == $symbol)
+                break;
+        }
+        if ($i != $size) {
+            $this->stocks[$i]['shares'] += $shares;
+        } else { // otherwise create a new element in the stocks array
+            $stock = array();
+            $stock['portfolio_id'] = $this->id;
+            $stock['symbol'] = $symbol;
+            $stock['shares'] = $shares;
+            array_push($this->stocks, $stock);
+        }
     }
 }
 

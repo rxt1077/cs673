@@ -24,8 +24,11 @@ echo "<script src='$basedir/js/symbols.js'></script>";
     <div class="mdl-cell
                 mdl-cell--4-col">
         <form autocomplete="off"
-              action='<?php echo "$basedir/actions/confirm_purchase.php"; ?>' 
+              action='<?php echo "$basedir/actions/get_quote.php"; ?>' 
               method="get">
+            <input type="hidden"
+                   name="action"
+                   value="buy">
             <input type="hidden"
                    name="pid"
                    value="<?php echo $pid; ?>">
@@ -58,8 +61,11 @@ echo "<script src='$basedir/js/symbols.js'></script>";
     <div class="mdl-cell
                 mdl-cell--4-col">
         <form autocomplete="off"
-              action="actions/sell_stock.php"
+              action='<?php echo "$basedir/actions/get_quote.php"; ?>'
               method="get">
+            <input type="hidden"
+                   name="action"
+                   value="sell">
             <input type="hidden"
                    name="pid"
                    value="<?php echo $pid; ?>">

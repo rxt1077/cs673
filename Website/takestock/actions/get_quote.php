@@ -5,6 +5,15 @@
     include 'include/portfolio.php';
     include 'include/stockclient.php';
 
+    // Make sure they specified buy or sell
+    if (! isset($_GET['action'])) {
+        die("No action specified");
+    }
+    $action = $_GET['action'];
+    if (($action != 'buy') and ($action != 'sell')) {
+        die("Invalid action");
+    }
+
     // Make sure a portoflio was passed and the signed in user owns it
     if (! isset($_GET['pid'])) {
         die("Portfolio not specified");
@@ -38,7 +47,12 @@
     $stmt->bindParam(3, $price);
     $stmt->execute();
 
-    $title = 'Confirm Purchase';
+    if ($action == 'buy') {
+        $title = 'Confirm Purchase';
+    } else {
+        $title = 'Confirm Sale';
+    }
+
     include 'templates/dialog_top.php';
 ?>
 
@@ -66,10 +80,13 @@
         <!-- Second row -->
         <div class="mdl-grid">
             <?php
-                if ($portfolio->getCash() == 0.00) {
-                    $max = 0;
+                if ($action == 'buy') {
+                    if ($portfolio->getCash() == 0.00) {
+                        $max = 0;
+                    } else {
+                        $max = floor($portfolio->getCash() / $price);
+                    }
                 } else {
-                    $max = floor($portfolio->getCash() / $price);
                 }
             ?>
             <div class="mdl-cell
@@ -89,7 +106,7 @@
             </div>
             <div class="mdl-cell
                         mdl-cell--6-col">
-                <h5>Cost: $<span id="shares_cost">0.00</span></h5>
+                <h5>Value: $<span id="shares_cost">0.00</span></h5>
             </div>
             <script>
                 function updateSlider(shares) {
@@ -128,7 +145,7 @@
                            mdl-button--raised
                            mdl-button--colored"
                     type="submit"
-                    formaction="buy_stock.php">
+                    formaction="<?php echo $action ? 'buy_stock.php' : 'sell_stock.php'; ?>">
                 Confirm
             </button>
         </div>
