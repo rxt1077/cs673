@@ -87,10 +87,10 @@
         <div class="mdl-grid">
             <?php
                 if ($action == 'buy') {
-                    if ($portfolio->getCash() == 0.00) {
+                    if ($portfolio->balance() == 0.00) {
                         $max = 0;
                     } else {
-                        $max = floor($portfolio->getCash() / $price);
+                        $max = floor($portfolio->balance() / $price);
                     }
                 } else {
                     $max = $portfolio->getShares($symbol);
@@ -102,7 +102,7 @@
             </div>
             <div class="mdl-cell
                         mdl-cell--6-col">
-                <h5>Available Funds: <?php $portfolio->printCash(); ?></h5>
+                <h5>Available Funds: <?php $portfolio->printBalance(); ?></h5>
             </div>
         </div>
         <!-- Third row -->

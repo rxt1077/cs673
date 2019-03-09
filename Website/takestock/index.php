@@ -5,25 +5,15 @@
     include 'templates/page_top.php';
 ?>
 
-<div>TODO: List all of the transactions</div>
-<div>TODO: Orders workflow</div>
-<div>TODO: Allow renaming portfolio</div>
-
 <?php
 echo "<script src='$basedir/js/autocomplete.js'></script>";
 echo "<script src='$basedir/js/symbols.js'></script>";
 ?>
-<!-- General information about portfolio -->
+<!-- Stock table and log -->
 <div class="mdl-grid">
     <div class="mdl-cell
-                mdl-cell--12-col">
-        <h5>Available Funds: <?php $portfolio->printCash(); ?></h5>
-    </div>
-</div>
-<!-- Portfolio contents and value -->
-<div class="mdl-grid">
-    <div class="mdl-cell
-                mdl-cell--12-col">
+                mdl-cell--6-col">
+        <h5>Stocks</h5>
         <table class="mdl-data-table
                       mdl-js-data-table
                       mdl-shadow--2dp
@@ -68,6 +58,48 @@ echo "<script src='$basedir/js/symbols.js'></script>";
                 </tr>
             </tfoot>                   
         </table>
+    </div>
+    <div class="mdl-cell
+                mdl-cell--6-col">
+        <h5>Recent Actions</h5>
+        <table class="mdl-data-table
+                      mdl-js-data-table
+                      mdl-shadow--2dp
+                      stock-table">
+            <tbody>
+                <tr>
+                <?php
+                    foreach ($portfolio->getLogs() as $entry) {
+                        echo "<td class='mdl-data-table__cell--non-numeric'>$entry</td>";
+                    }
+                ?>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="mdl-grid">
+    <!-- Balance Deposit/Withdraw -->
+    <div class="mdl-cell
+                mdl-cell--12-col">
+        <form>
+            <span class="mdl-typography--title">Available Funds: <?php $portfolio->printBalance(); ?></span>
+            <button class="mdl-button
+                           mdl-js-button
+                           mdl-button--icon
+                           mdl-js-ripple-effect
+                           mdl-button--colored"
+                    id="add">
+                <i class="material-icons">add</i>
+            </button>
+            <button class="mdl-button
+                           mdl-js-button
+                           mdl-button--icon
+                           mdl-js-ripple-effect
+                           mdl-button--colored">
+                <i class="material-icons">remove</i>
+            </button>
+        </form>
     </div>
 </div>
 <!-- Portfolio actions -->

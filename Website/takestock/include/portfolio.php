@@ -7,6 +7,7 @@ class Portfolio {
     private $stocks;
     private $cash;
     private $email;
+    private $log;
 
     // needs the database connection
     function __construct($conn) {
@@ -26,6 +27,55 @@ class Portfolio {
         $this->stocks = array();
         $this->cash = 0.00;
         $this->email = $email;
+        $this->log('CREATED', '', 0, 0.00);
+    }
+
+    // adds an entry to the log table for this portfolio
+    // log table isn't ORMed as it doesn't seem worth it
+    public function log($action, $symbol, $shares, $price) {
+        $stmt = $this->conn->prepare('INSERT INTO log (datetime, portfolio_id, action, symbol, shares, price) VALUES (?,?,?,?,?,?);');
+        $date = date('Y-m-d H:i:s');
+        $stmt->bindParam(1, $date);
+        $stmt->bindParam(2, $this->id);
+        $stmt->bindParam(3, $action);
+        $stmt->bindParam(4, $symbol);
+        $stmt->bindParam(5, $shares);
+        $stmt->bindParam(6, $price);
+        $stmt->execute();
+    }
+
+    // gets a pretty string array of log entries
+    public function getLogs() {
+        $stmt = $this->conn->prepare('SELECT * FROM log WHERE portfolio_id=?;');
+        $stmt->bindParam(1, $this->id);
+        $stmt->execute();
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $logStrings = array();
+        foreach ($results as $result) {
+            $action = $result['action'];
+            $symbol = $result['symbol'];
+            $shares = $result['shares'];
+            $price = money_format('$%n', $result['price']);
+            switch($result['action']) {
+                case 'CREATED':
+                    $message = 'Portfolio created.';
+                    break;
+                case 'BUY':
+                    $message = "Bought $shares shares of $symbol at $price.";
+                    break;
+                case 'SELL':
+                    $message = "Sold $shares of $symbol at $price.";
+                    break;
+                case 'DEPOSIT':
+                    $message = "Deposited $price.";
+                    break;
+                case 'WITHDRAWL':
+                    $message = "Withdrew $price.";
+                    break;
+            }
+            array_push($logStrings, $result['datetime'] . ': ' . $message);
+        }
+        return $logStrings;
     }
 
     // loads the portfolio info for a pid 
@@ -98,12 +148,24 @@ class Portfolio {
     }        
 
     // returns the cash in this portfolio
-    public function getCash() {
+    public function balance() {
         return $this->cash;
     }
 
+    // deposit money in this portfolio
+    public function deposit($amount) {
+        $this->log('DEPOSIT', '', 0, $amount);
+        $this->cash += $amount;
+    } 
+       
+    // withdraws money from this portfolio
+    public function withdraw($amount) {
+        $this->log('WITHDRAW', '', 0, $amount);
+        $this->cash -= $amount;
+    }        
+
     // prints a string representation of the cash in this portfolio
-    public function printCash() {
+    public function printBalance() {
         echo money_format("$%n", $this->cash);
     }
 
@@ -153,6 +215,8 @@ class Portfolio {
 
     // adds a stock to the stock array and subtracts the cost from cash
     public function buyStock($symbol, $shares, $price) {
+        $this->log('BUY', $symbol, $shares, $price);
+
         // pay for the stock
         $this->cash -= $price * $shares;
      
@@ -176,6 +240,8 @@ class Portfolio {
 
     // removes a stock from the stock array and adds the sale value to cash
     public function sellStock($symbol, $shares, $price) {
+        $this->log('SELL', $symbol, $shares, $price);
+
         // Add the cash back into the portfolio
         $this->cash += $shares * $price;
 

@@ -55,7 +55,7 @@ EOD;
 
     if ($action == 'buy') {
         // Make sure they have enough money
-        if (($shares * $price) > $portfolio->getCash()) {
+        if (($shares * $price) > $portfolio->balance()) {
             die("Insufficient funds.");
         }
 

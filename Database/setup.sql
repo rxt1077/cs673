@@ -30,3 +30,12 @@ CREATE TABLE IF NOT EXISTS quote (
     symbol VARCHAR(255) NOT NULL,
     price DECIMAL(13,2) NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS log (
+    datetime DATETIME NOT NULL,
+    portfolio_id INTEGER NOT NULL,
+    action VARCHAR(255) NOT NULL,
+    symbol VARCHAR(255) NOT NULL,
+    shares INTEGER NOT NULL,
+    price DECIMAL(13,2) NOT NULL
+);
