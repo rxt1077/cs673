@@ -4,6 +4,7 @@
     include('include/check_session.php');
     include('include/db.php');
     include('include/portfolio.php');
+    include('include/stockclient.php');
 
     // Make sure the action is valid
     if (! isset($_GET['action'])) {
@@ -31,18 +32,15 @@
 
     // Configure the maximum amount to transfer
     if ($action == 'deposit') {
-        if ($portfolio->isEmpty()) {
-            $max = 5000.00;
-        } else {
-            $max = 0.00; //FIXME: Set to 10% of portfolio value
-        }
+        $client = new StockClient($stockserver_address, $stockserver_port);
+        $max = $portfolio->maxDeposit($client);
     } else {
         $max = $portfolio->balance();
     }
 ?>
 
 <form method="post"
-      action="actions/transfer_funds.php"
+      action="transfer_funds.php"
       id="form">
     <!-- Hidden fields for portfolio_id and action -->
     <input type="hidden" name="pid" value="<?php echo $pid; ?>">

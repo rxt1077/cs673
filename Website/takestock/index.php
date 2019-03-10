@@ -14,68 +14,70 @@ echo "<script src='$basedir/js/symbols.js'></script>";
     <div class="mdl-cell
                 mdl-cell--6-col">
         <h5>Stocks</h5>
-        <table class="mdl-data-table
-                      mdl-js-data-table
-                      mdl-shadow--2dp
-                      stock-table">
-            <thead class="stock-table">
-                <tr>
-                    <th class="mdl-data-table__cell--non-numeric">Symbol</th>
-                    <th>Shares</th>
-                    <th>Price/Share</th>
-                    <th>Value</th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php
-                $total = 0.00;
-                foreach ($portfolio->getStocks() as $stock) {
-                    $symbol = $stock['symbol'];
-                    $shares = $stock['shares'];
-                    $price = $client->getQuoteUSD($symbol);
-                    $price_output = money_format("$%n", $price);
-                    $value = $shares * $price;
-                    $value_output = money_format("$%n", $value);
-                    $total += $value;
-                    echo '<tr>';
-                    echo "    <td class='mdl-data-table__cell--non-numeric'>$symbol</td>";
-                    echo "    <td>$shares</td>";
-                    echo "    <td>$price_output</td>";
-                    echo "    <td>$value_output</td>";
-                    echo '</tr>';
-                }                    
-            ?>
-            </tbody>
-            <tfoot class="stock-table">
-                <tr>
-                    <th class="mdl-data-table__cell--non-numeric">Total</th>
-                    <td></td>
-                    <td></td>
-                    <?php
-                        $total_output = money_format("$%n", $total);
-                        echo "<td>$total_output</td>";
-                    ?>
-                </tr>
-            </tfoot>                   
-        </table>
+        <div class="stock-table-div">
+            <table class="mdl-data-table
+                          mdl-js-data-table
+                          mdl-shadow--2dp
+                          stock-table">
+                <thead class="stock-table">
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">Symbol</th>
+                        <th>Shares</th>
+                        <th>Price/Share</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                    $total = 0.00;
+                    foreach ($portfolio->getStocks() as $stock) {
+                        $symbol = $stock['symbol'];
+                        $shares = $stock['shares'];
+                        $price = $client->getQuoteUSD($symbol);
+                        $price_output = money_format("$%n", $price);
+                        $value = $shares * $price;
+                        $value_output = money_format("$%n", $value);
+                        $total += $value;
+                        echo '<tr>';
+                        echo "    <td class='mdl-data-table__cell--non-numeric'>$symbol</td>";
+                        echo "    <td>$shares</td>";
+                        echo "    <td>$price_output</td>";
+                        echo "    <td>$value_output</td>";
+                        echo '</tr>';
+                    }                    
+                ?>
+                </tbody>
+                <tfoot class="stock-table">
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">Total</th>
+                        <td></td>
+                        <td></td>
+                        <?php
+                            $total_output = money_format("$%n", $total);
+                            echo "<td>$total_output</td>";
+                        ?>
+                    </tr>
+                </tfoot>                   
+            </table>
+        </div>
     </div>
     <div class="mdl-cell
                 mdl-cell--6-col">
         <h5>Recent Actions</h5>
-        <table class="mdl-data-table
-                      mdl-js-data-table
-                      mdl-shadow--2dp
-                      stock-table">
-            <tbody>
-                <tr>
-                <?php
-                    foreach ($portfolio->getLogs() as $entry) {
-                        echo "<td class='mdl-data-table__cell--non-numeric'>$entry</td>";
-                    }
-                ?>
-                </tr>
-            </tbody>
-        </table>
+        <div class="log-table-div">
+            <table class="mdl-data-table
+                          mdl-js-data-table
+                          mdl-shadow--2dp
+                          log-table">
+                <tbody>
+                    <?php
+                        foreach ($portfolio->getLogs() as $entry) {
+                            echo "<tr><td class='mdl-data-table__cell--non-numeric'>$entry</td></tr>";
+                        }
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 <div class="mdl-grid">
@@ -112,7 +114,8 @@ echo "<script src='$basedir/js/symbols.js'></script>";
                 mdl-cell--4-col">
         <form autocomplete="off"
               action='<?php echo "$basedir/actions/get_quote.php"; ?>' 
-              method="get">
+              method="get"
+              id="get_buy_quote">
             <input type="hidden"
                    name="action"
                    value="buy">
@@ -122,7 +125,8 @@ echo "<script src='$basedir/js/symbols.js'></script>";
             <span class="mdl-typography--title">Buy</span>
             <div class="mdl-textfield
                         mdl-js-textfield
-                        autocomplete">
+                        autocomplete"
+                 id="buy_symbol_textfield">
                 <input class="mdl-textfield__input"
                        type="text"
                        id="buy_symbol"
@@ -131,6 +135,7 @@ echo "<script src='$basedir/js/symbols.js'></script>";
                        for="buy_symbol">
                     Ticker symbol...
                 </label>
+                <span class="mdl-textfield__error">Please enter a valid symbol in the Dow 30 or Nifty 50</span>
             </div>
             <button class="mdl-button
                            mdl-js-button
@@ -142,6 +147,14 @@ echo "<script src='$basedir/js/symbols.js'></script>";
         </form>
         <script>
             autocomplete(document.getElementById("buy_symbol"), symbols);
+            document.getElementById('get_buy_quote').addEventListener('submit', function(e) {
+                symbol = document.getElementById('buy_symbol').value;
+                if (! symbols.includes(symbol)) {
+                    textfield = document.getElementById('buy_symbol_textfield'); 
+                    textfield.classList.add("is-invalid");
+                    e.preventDefault();            
+                }
+            });
         </script>
     </div>
     <!-- Sell -->
@@ -149,7 +162,8 @@ echo "<script src='$basedir/js/symbols.js'></script>";
                 mdl-cell--4-col">
         <form autocomplete="off"
               action='<?php echo "$basedir/actions/get_quote.php"; ?>'
-              method="get">
+              method="get"
+              id="get_sell_quote">
             <input type="hidden"
                    name="action"
                    value="sell">
@@ -159,7 +173,8 @@ echo "<script src='$basedir/js/symbols.js'></script>";
             <span class="mdl-typography--title">Sell</span>
             <div class="mdl-textfield
                         mdl-js-textfield
-                        autocomplete">
+                        autocomplete"
+                 id="sell_symbol_textfield">
                 <input class="mdl-textfield__input"
                        type="text"
                        id="sell_symbol"
@@ -168,6 +183,7 @@ echo "<script src='$basedir/js/symbols.js'></script>";
                        for="sell_symbol">
                     Ticker symbol...
                 </label>
+                <span class="mdl-textfield__error">Please enter a valid symbol for a stock in the portfolio</span>
             </div>
             <button class="mdl-button
                            mdl-js-button
@@ -178,7 +194,16 @@ echo "<script src='$basedir/js/symbols.js'></script>";
             </button>
         </form>
         <script>
-            autocomplete(document.getElementById("sell_symbol"), <?php echo $portfolio->jsonStockSymbols(); ?>);
+            portfolio_symbols = <?php echo $portfolio->jsonStockSymbols(); ?>;
+            autocomplete(document.getElementById("sell_symbol"), portfolio_symbols);
+            document.getElementById('get_sell_quote').addEventListener('submit', function(e) {
+                symbol = document.getElementById('sell_symbol').value;
+                if (! portfolio_symbols.includes(symbol)) {
+                    textfield = document.getElementById('sell_symbol_textfield'); 
+                    textfield.classList.add("is-invalid");
+                    e.preventDefault();            
+                }
+            });
         </script>
     </div>
     <!-- Order -->

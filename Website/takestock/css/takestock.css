@@ -92,8 +92,13 @@
     float: right;
 }
 
-.stock-table {
+.stock-table, .log-table {
     width: 100%;
+}
+
+.stock-table-div, .log-table-div {
+    overflow: auto;
+    height: 30em;
 }
 
 #amount_textfield {

@@ -46,7 +46,7 @@ class Portfolio {
 
     // gets a pretty string array of log entries
     public function getLogs() {
-        $stmt = $this->conn->prepare('SELECT * FROM log WHERE portfolio_id=?;');
+        $stmt = $this->conn->prepare('SELECT * FROM log WHERE portfolio_id=? ORDER BY datetime DESC;');
         $stmt->bindParam(1, $this->id);
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -55,8 +55,9 @@ class Portfolio {
             $action = $result['action'];
             $symbol = $result['symbol'];
             $shares = $result['shares'];
+            $datetime = $result['datetime'];
             $price = money_format('$%n', $result['price']);
-            switch($result['action']) {
+            switch($action) {
                 case 'CREATED':
                     $message = 'Portfolio created.';
                     break;
@@ -64,16 +65,19 @@ class Portfolio {
                     $message = "Bought $shares shares of $symbol at $price.";
                     break;
                 case 'SELL':
-                    $message = "Sold $shares of $symbol at $price.";
+                    $message = "Sold $shares shares of $symbol at $price.";
                     break;
                 case 'DEPOSIT':
                     $message = "Deposited $price.";
                     break;
-                case 'WITHDRAWL':
+                case 'WITHDRAW':
                     $message = "Withdrew $price.";
                     break;
+                default:
+                    $message = "Invalid log entry";
+                    break;
             }
-            array_push($logStrings, $result['datetime'] . ': ' . $message);
+            array_push($logStrings, $datetime . ': ' . $message);
         }
         return $logStrings;
     }
@@ -107,14 +111,14 @@ class Portfolio {
         $stmt->bindParam(2, $this->cash);
         $stmt->bindParam(3, $this->id);
         $stmt->execute();
+
         // save the stock info
+        // drop all stocks 
+        $stmt = $this->conn->prepare('DELETE FROM stock WHERE portfolio_id=?;');
+        $stmt->bindParam(1, $this->id);
+        $stmt->execute();
         foreach ($this->stocks as $stock) {
-            // drop the previous row if we have one
-            $stmt = $this->conn->prepare('DELETE FROM stock WHERE portfolio_id=? AND symbol=?;');
-            $stmt->bindParam(1, $this->id);
-            $stmt->bindParam(2, $stock['symbol']);
-            $stmt->execute();
-            // save the new row
+            // save the current stocks
             $stmt = $this->conn->prepare('INSERT INTO stock (portfolio_id, symbol, shares) VALUES (?,?,?);');
             $stmt->bindParam(1, $this->id);
             $stmt->bindParam(2, $stock['symbol']);
@@ -252,11 +256,36 @@ class Portfolio {
                 $this->stocks[$i]['shares'] -= $shares;
                 // if they don't have any shares left, pull it from the array
                 if ($this->stocks[$i]['shares'] <= 0) {
-                    unset($this->stocks[$i]);
+                    array_splice($this->stocks, $i, 1);
                 }
                 return;
             }
         }
+    }
+
+    // calculates the maximum amount that can be deposited into this portfolio
+    public function maxDeposit($client) {
+        if ($this->isEmpty()) {
+            return 5000.00;
+        } else {
+            $max = round($this->value($client)*0.10 - $this->cash, 2);
+            if ($max < 0) {
+                return 0.00;
+            } else {
+                return $max;
+            }
+        }
+    }
+
+    // takes a stockclient connection, gets quotes, and sums the value of a
+    // portfolio
+    public function value($client) {
+        $total = 0.00;
+        foreach ($this->stocks as $stock) {
+            $value = $client->getQuoteUSD($stock['symbol']);
+            $total += $value;
+        }
+        return $total;
     }
 }
 
