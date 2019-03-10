@@ -95,3 +95,7 @@
 .stock-table {
     width: 100%;
 }
+
+#amount_textfield {
+    width: 90%;
+}

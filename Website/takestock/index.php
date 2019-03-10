@@ -84,21 +84,24 @@ echo "<script src='$basedir/js/symbols.js'></script>";
                 mdl-cell--12-col">
         <form>
             <span class="mdl-typography--title">Available Funds: <?php $portfolio->printBalance(); ?></span>
-            <button class="mdl-button
-                           mdl-js-button
-                           mdl-button--icon
-                           mdl-js-ripple-effect
-                           mdl-button--colored"
-                    id="add">
-                <i class="material-icons">add</i>
-            </button>
-            <button class="mdl-button
-                           mdl-js-button
-                           mdl-button--icon
-                           mdl-js-ripple-effect
-                           mdl-button--colored">
-                <i class="material-icons">remove</i>
-            </button>
+            <a href='<?php echo "$basedir/actions/confirm_transfer.php?action=deposit&pid=$pid"; ?>'>
+                <div class="mdl-button
+                               mdl-js-button
+                               mdl-button--icon
+                               mdl-js-ripple-effect
+                               mdl-button--colored">
+                    <i class="material-icons">add</i>
+                </div>
+            </a>
+            <a href='<?php echo "$basedir/actions/confirm_transfer.php?action=withdraw&pid=$pid"; ?>'>
+                <div class="mdl-button
+                               mdl-js-button
+                               mdl-button--icon
+                               mdl-js-ripple-effect
+                               mdl-button--colored">
+                    <i class="material-icons">remove</i>
+                </div>
+            </a>
         </form>
     </div>
 </div>

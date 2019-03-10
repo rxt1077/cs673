@@ -81,7 +81,7 @@
                     if ($current_portfolio->isEmpty() and
                        (! $current_portfolio->isOnly())) {
                         echo "<span class='float-right'>";
-                        echo "    <form action='actions/delete_portfolio.php' method='get'>";
+                        echo "    <form action='$basedir/actions/delete_portfolio.php' method='get'>";
                         echo "        <input type='hidden' name='pid' value='$id'>"; 
                         echo "        <button class='mdl-button";
                         echo "                       mdl-js-button";
@@ -98,7 +98,9 @@
                 
                 ?>
                 <!-- Form to allow user to create a new portfolio -->
-                <form class="mdl-navigation__link" method="post">
+                <form class="mdl-navigation__link"
+                      method="post"
+                      action='<?php echo "$basedir/actions/add_portfolio.php"; ?>'>
                     <div class="mdl-textfield
                                 mdl-js-textfield">
                         <input class="mdl-textfield__input"
@@ -115,7 +117,6 @@
                                    mdl-button--icon
                                    mdl-js-ripple-effect
                                    mdl-button--colored"
-                            formaction="actions/add_portfolio.php"
                             type="submit">
                         <i class="material-icons">add</i>
                     </button>
