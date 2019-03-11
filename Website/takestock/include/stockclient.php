@@ -3,10 +3,17 @@
 //Basic client to interface with StockServer
 class StockClient {
     private $socket;
+    private $rate;
 
     function __construct($address, $port) {
+        // connect to our backend
         $this->socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
         socket_connect($this->socket, $address, $port);
+
+        // pull down the current exchange rate
+        $contents = file_get_contents('https://api.exchangeratesapi.io/latest?base=INR&symbols=USD');
+        $results = json_decode($contents, true);
+        $this->rate = $results['rates']['USD'];
     }
 
     // gets a quote for a single symbol in USD
@@ -20,8 +27,7 @@ class StockClient {
             return (float)$parts[1];
         }
         if ($parts[0] == 'INR') {
-            // TODO: convert and return
-            return;
+            return (float)$parts[1] * $this->rate;
         }
     }
 }
