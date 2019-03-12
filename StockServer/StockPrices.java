@@ -60,7 +60,7 @@ class StockPrices implements Runnable {
                     Matcher matcher = pattern.matcher(currentLine);
                     if (matcher.find()) {
                         price = matcher.group(1);
-                        prices.put(symbol, "INR," + price);
+                        prices.put(symbol, "INR," + price.replace(",", ""));
                         continue;
                     }
                 }

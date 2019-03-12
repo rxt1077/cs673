@@ -149,6 +149,7 @@ class Portfolio {
                 return $stock['shares'];
             }
         }
+        return 0;
     }        
 
     // returns the cash in this portfolio
@@ -277,15 +278,27 @@ class Portfolio {
         }
     }
 
-    // takes a stockclient connection, gets quotes, and sums the value of a
-    // portfolio
-    public function value($client) {
-        $total = 0.00;
+    // returns an associative array with the portfolio value for each exchange
+    public function valueByGroup($client) {
+        $totals = array();
+        $totals['nifty50'] = 0.00;
+        $totals['dow30'] = 0.00;
         foreach ($this->stocks as $stock) {
             $value = $client->getQuoteUSD($stock['symbol']);
-            $total += $value;
+            $amount = $value * $stock['shares'];
+            if (substr($stock['symbol'], -3) === '.NS') {
+                $totals['nifty50'] += $amount;
+            } else {
+                $totals['dow30'] += $amount;
+            }
         }
-        return $total;
+        return $totals;
+    }
+
+    // returns the total value of the portfolio
+    public function value($client) {
+        $totals = $this->valueByGroup($client);
+        return $totals['nifty50'] + $totals['dow30'];
     }
 }
 

@@ -9,77 +9,6 @@
 echo "<script src='$basedir/js/autocomplete.js'></script>";
 echo "<script src='$basedir/js/symbols.js'></script>";
 ?>
-<!-- Stock table and log -->
-<div class="mdl-grid">
-    <div class="mdl-cell
-                mdl-cell--6-col">
-        <h5>Stocks</h5>
-        <div class="stock-table-div">
-            <table class="mdl-data-table
-                          mdl-js-data-table
-                          mdl-shadow--2dp
-                          stock-table">
-                <thead class="stock-table">
-                    <tr>
-                        <th class="mdl-data-table__cell--non-numeric">Symbol</th>
-                        <th>Shares</th>
-                        <th>Price/Share</th>
-                        <th>Value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php
-                    $total = 0.00;
-                    foreach ($portfolio->getStocks() as $stock) {
-                        $symbol = $stock['symbol'];
-                        $shares = $stock['shares'];
-                        $price = $client->getQuoteUSD($symbol);
-                        $price_output = money_format("$%n", $price);
-                        $value = $shares * $price;
-                        $value_output = money_format("$%n", $value);
-                        $total += $value;
-                        echo '<tr>';
-                        echo "    <td class='mdl-data-table__cell--non-numeric'>$symbol</td>";
-                        echo "    <td>$shares</td>";
-                        echo "    <td>$price_output</td>";
-                        echo "    <td>$value_output</td>";
-                        echo '</tr>';
-                    }                    
-                ?>
-                </tbody>
-                <tfoot class="stock-table">
-                    <tr>
-                        <th class="mdl-data-table__cell--non-numeric">Total</th>
-                        <td></td>
-                        <td></td>
-                        <?php
-                            $total_output = money_format("$%n", $total);
-                            echo "<td>$total_output</td>";
-                        ?>
-                    </tr>
-                </tfoot>                   
-            </table>
-        </div>
-    </div>
-    <div class="mdl-cell
-                mdl-cell--6-col">
-        <h5>Recent Actions</h5>
-        <div class="log-table-div">
-            <table class="mdl-data-table
-                          mdl-js-data-table
-                          mdl-shadow--2dp
-                          log-table">
-                <tbody>
-                    <?php
-                        foreach ($portfolio->getLogs() as $entry) {
-                            echo "<tr><td class='mdl-data-table__cell--non-numeric'>$entry</td></tr>";
-                        }
-                    ?>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
 <div class="mdl-grid">
     <!-- Balance Deposit/Withdraw -->
     <div class="mdl-cell
@@ -113,7 +42,7 @@ echo "<script src='$basedir/js/symbols.js'></script>";
     <div class="mdl-cell
                 mdl-cell--4-col">
         <form autocomplete="off"
-              action='<?php echo "$basedir/actions/get_quote.php"; ?>' 
+              action='<?php echo "$basedir/actions/confirm_trade.php"; ?>' 
               method="get"
               id="get_buy_quote">
             <input type="hidden"
@@ -161,7 +90,7 @@ echo "<script src='$basedir/js/symbols.js'></script>";
     <div class="mdl-cell
                 mdl-cell--4-col">
         <form autocomplete="off"
-              action='<?php echo "$basedir/actions/get_quote.php"; ?>'
+              action='<?php echo "$basedir/actions/confirm_trade.php"; ?>'
               method="get"
               id="get_sell_quote">
             <input type="hidden"
@@ -250,6 +179,83 @@ echo "<script src='$basedir/js/symbols.js'></script>";
                 <i class="material-icons">send</i>
             </button>
         </form>
+    </div>
+</div>
+<!-- Stock table and log -->
+<div class="mdl-grid">
+    <div class="mdl-cell
+                mdl-cell--6-col">
+    <?php
+        $totals = $portfolio->valueByGroup($client);
+        $total = $totals['nifty50'] + $totals['dow30'];
+        $nifty50Percent = round($totals['nifty50'] / $total * 100);
+        $dow30Percent = round($totals['dow30'] / $total * 100);
+        echo "<h5>Stocks: $dow30Percent% Dow 30, $nifty50Percent% Nifty 50</h5>";
+    ?>
+        <div class="stock-table-div">
+            <table class="mdl-data-table
+                          mdl-js-data-table
+                          mdl-shadow--2dp
+                          stock-table">
+                <thead class="stock-table">
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">Symbol</th>
+                        <th>Shares</th>
+                        <th>Price/Share</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                    $total = 0.00;
+                    foreach ($portfolio->getStocks() as $stock) {
+                        $symbol = $stock['symbol'];
+                        $shares = $stock['shares'];
+                        $price = $client->getQuoteUSD($symbol);
+                        $price_output = money_format("$%n", $price);
+                        $value = $shares * $price;
+                        $value_output = money_format("$%n", $value);
+                        $total += $value;
+                        echo '<tr>';
+                        echo "    <td class='mdl-data-table__cell--non-numeric'>$symbol</td>";
+                        echo "    <td>$shares</td>";
+                        echo "    <td>$price_output</td>";
+                        echo "    <td>$value_output</td>";
+                        echo '</tr>';
+                    }                    
+                ?>
+                </tbody>
+                <tfoot class="stock-table">
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">Total</th>
+                        <td></td>
+                        <td></td>
+                        <?php
+                            $total_output = money_format("$%n", $total);
+                            echo "<td>$total_output</td>";
+                        ?>
+                    </tr>
+                </tfoot>                   
+            </table>
+        </div>
+    </div>
+    <div class="mdl-cell
+                mdl-cell--6-col">
+        <h5>Recent Actions</h5>
+        <div class="log-table-div">
+            <table class="mdl-data-table
+                          mdl-js-data-table
+                          mdl-shadow--2dp
+                          log-table">
+                <tbody>
+                    <?php
+                        foreach ($portfolio->getLogs() as $entry) {
+                            echo "<tr><td class='mdl-data-table__cell--non-numeric'>$entry</td></tr>";
+                        }
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 

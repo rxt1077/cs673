@@ -6,36 +6,25 @@
     include 'include/post_params.php';
     include 'include/portfolio.php';
 
-    // Make sure they specified an action
-    $action = getparam('action');
-    if (($action != 'buy') and ($action != 'sell')) {
-        die("No action specified");
+    // Make sure the trade is valid
+    if (! isset($_SESSION['trade'])) {
+        die("Invalid trade");
     }
+    $trade = $_SESSION['trade'];
 
-    // Make sure there is a symbol and the quote is valid
+    if ((time() - $trade['time']) > 60) {
+        die("Time limit expired");
+    }
+    $price = $trade['price']; 
+    $action = $trade['action'];
+    $max = $trade['max'];
+
+    // Make sure there is a symbol 
     $symbol = getparam('symbol');
     if ($symbol == '') {
         die("No symbol specified");
     }
-    $sql  = <<<'EOD'
-SELECT price
-FROM quote
-WHERE email=? AND
-      symbol=? AND
-      ts >= DATE_SUB(NOW(), INTERVAL 60 SECOND)
-ORDER BY ts DESC;
-EOD;
-    $stmt = $conn->prepare($sql);
-    $stmt->bindParam(1, $email);
-    $stmt->bindParam(2, $symbol);
-    $stmt->execute();
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    if (! isset($row['price'])) {
-        die("No valid quote found.");
-    } else {
-        $price = $row['price'];
-    }
-    
+
     // Make sure there is a portfolio and they own it
     $pid = getparam('pid');
     if ($pid == '') {
@@ -52,27 +41,19 @@ EOD;
     if ($shares == '') {
         die("Shares amount not specified.");
     }
+    if ($shares > $max) {
+        die("Shares greater than max");
+    }
 
+    // perform the action
     if ($action == 'buy') {
-        // Make sure they have enough money
-        if (($shares * $price) > $portfolio->balance()) {
-            die("Insufficient funds.");
-        }
-
-        // Put the stock in the portfolio and save it
         $portfolio->buyStock($symbol, $shares, $price);
     } else {
-        // Make sure they have enough shares
-        if ($shares > $portfolio->getShares($symbol)) {
-            die("Not enough shares for trade.");
-        }
-
-        // Remove the stock from the portfolio and save it
         $portfolio->sellStock($symbol, $shares, $price);
     }
     $portfolio->save();
 
     // redirect back to main page
-    header("Location: $basedir/index.php");
+    header("Location: $basedir/index.php?pid=$pid");
 
 ?>

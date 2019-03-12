@@ -24,13 +24,6 @@ CREATE TABLE IF NOT EXISTS stock (
     PRIMARY KEY (portfolio_id, symbol)
 );
 
-CREATE TABLE IF NOT EXISTS quote (
-    ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    email VARCHAR(255) NOT NULL,
-    symbol VARCHAR(255) NOT NULL,
-    price DECIMAL(13,2) NOT NULL
-);
-
 CREATE TABLE IF NOT EXISTS log (
     datetime DATETIME NOT NULL,
     portfolio_id INTEGER NOT NULL,
