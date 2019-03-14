@@ -51,21 +51,28 @@ class StockPrices implements Runnable {
                 "ULTRACEMCO.NS", "UPL.NS", "VEDL.NS", "WIPRO.NS", "YESBANK.NS",
                 "ZEEL.NS" };
             for (int i = 0; i < nifty50.length; i++) {
-                symbol = nifty50[i];
-                url = new URL("https://finance.yahoo.com/quote/" + symbol);
-                in = new BufferedReader(
-                    new InputStreamReader(url.openStream()));
-                pattern = Pattern.compile("<span class=\"Trsdu\\(0\\.3s\\).*?>(.*?)</span>");
-                while ((currentLine = in.readLine()) != null) {
-                    Matcher matcher = pattern.matcher(currentLine);
-                    if (matcher.find()) {
-                        price = matcher.group(1);
-                        prices.put(symbol, "INR," + price.replace(",", ""));
-                        continue;
+                try {
+                    symbol = nifty50[i];
+                    url = new URL("https://finance.yahoo.com/quote/" + symbol);
+                    in = new BufferedReader(
+                        new InputStreamReader(url.openStream()));
+                    pattern = Pattern.compile("<span class=\"Trsdu\\(0\\.3s\\).*?>(.*?)</span>");
+                    while ((currentLine = in.readLine()) != null) {
+                        Matcher matcher = pattern.matcher(currentLine);
+                        if (matcher.find()) {
+                            price = matcher.group(1);
+                            prices.put(symbol, "INR," + price.replace(",", ""));
+                            continue;
+                        }
                     }
+                } catch ( IOException e ) {
+                    // Occasionally we get HTTP 503 responses, wait a second
+                    // and then move on to the next stock
+                    System.out.println("IOException in Nifty 50 continuing...");
+                    Thread.sleep(1000);
                 }
             }
-        } catch (IOException e) {
+        } catch (InterruptedException | IOException e) {
             e.printStackTrace();
         }
     }
