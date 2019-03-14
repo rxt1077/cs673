@@ -8,10 +8,15 @@ class StockClient {
     function __construct($address, $port) {
         // connect to our backend
         $this->socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
-        socket_connect($this->socket, $address, $port);
+        if (! socket_connect($this->socket, $address, $port)) {
+            die("Unable to connect to StockServer");
+        }
 
         // pull down the current exchange rate
         $contents = file_get_contents('https://api.exchangeratesapi.io/latest?base=INR&symbols=USD');
+        if (! $contents) {
+            die("Unable to get exchange rate");
+        }
         $results = json_decode($contents, true);
         $this->rate = $results['rates']['USD'];
     }
@@ -27,7 +32,7 @@ class StockClient {
             return (float)$parts[1];
         }
         if ($parts[0] == 'INR') {
-            return (float)$parts[1] * $this->rate;
+            return round(((float)$parts[1] * $this->rate), 2);
         }
     }
 }
