@@ -1,3 +1,6 @@
-# Run StockServer
+# Run StockServer in a loop. It will restart every day
 
-java Main
+cd ~/cs673/StockServer
+while [ 1 ]; do
+    java Main >> StockServer.out 2>&1
+done

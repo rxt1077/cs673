@@ -1,9 +1,14 @@
-class Main {
-    public static void main(String args[]) {
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
+class Main {
+    private static String currentTime() {
+        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+    }
+    public static void main(String args[]) {
         int port = 9090;
 
-        System.out.printf("Running StockServer on port %d.\n", port);
+        System.out.printf("%s - Running StockServer on port %d.\n", currentTime(), port);
         StockServer server = new StockServer(port);
         new Thread(server).start();
         try {
@@ -11,7 +16,7 @@ class Main {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Stopping server...");
+        System.out.printf("%s - Stopping server...", currentTime());
         server.stop();
     }
 }

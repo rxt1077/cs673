@@ -300,6 +300,63 @@ class Portfolio {
         $totals = $this->valueByGroup($client);
         return $totals['nifty50'] + $totals['dow30'];
     }
+
+    // Builds an associative array of stocks with more detail based on
+    // the buys / sells in the log. This utilizes Average Cost Basis
+    public function currentStockReport() {
+        $stmt = $this->conn->prepare('SELECT * FROM log WHERE portfolio_id=? ORDER BY datetime ASC;');
+        $stmt->bindParam(1, $this->id);
+        $stmt->execute();
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stocks = array();
+        foreach ($results as $result) {
+            // Pull the details from the log
+            $action = $result['action'];
+            $symbol = $result['symbol'];
+            $shares = $result['shares'];
+            $datetime = $result['datetime'];
+            $price = $result['price'];
+
+            // See if the stock is already in our list
+            $stock = false;
+            $index = null;
+            $numStocks = count($stocks);
+            foreach ($stocks as $index=>&$check) {
+                if ($check['symbol'] == $symbol) {
+                    $stock = $check;
+                }
+            }
+
+            // process buys / sells and keep info for Average Cost Basis
+            switch ($action) {
+                case 'BUY': {
+                    if (! $stock) {
+                        $stock = array(); // a new stock
+                        $stock['lastTrade'] = $datetime;
+                        $stock['symbol'] = $symbol;
+                        $stock['shares'] = $shares;
+                        $stock['totalPrice'] = $shares * $price;
+                        $stocks[] = $stock;
+                    } else { // something we already own
+                        $stock['lastPurchase'] = $datetime;
+                        $stock['shares'] += $shares;
+                        $stock['totalPrice'] += $shares * $price;
+                    }
+                    break;
+                }
+                case 'SELL': {
+                    $stock['lastTrade'] = $datetime;
+                    $stock['shares'] -= $shares;
+                    $stock['totalPrice'] -= $shares * $price;
+                    if ($stock['shares'] <= 0) {
+                        array_splice($stocks, $index, 1);
+                    }
+                    break;
+                }
+            }
+        }
+        return $stocks;
+    }        
 }
 
 ?>

@@ -50,7 +50,12 @@
                 <nav class="mdl-navigation
                             mdl-layout--large-screen-only">
                     <span class="mdl-navigation__link">
-                        <?php echo "$email <a href='actions/end_session.php'>(Sign Out)</a>"; ?>
+                        <a href='<?php echo "$basedir/actions/expected_return.php?pid=$pid"; ?>'>
+                            Expected Return
+                        </a>
+                    </span>
+                    <span class="mdl-navigation__link">
+                        <?php echo "$email <a href='$basedir/actions/end_session.php'>(Sign Out)</a>"; ?>
                     </span>
                 </nav>
             </div>
@@ -75,7 +80,7 @@
                     $id = $current_portfolio->getId();
                     $name = $current_portfolio->getName();
                     echo "<div class='mdl-navigation__link'>";
-                    echo "    <a href='index.php?pid=$id'>$name</a>";
+                    echo "    <a href='$basedir/index.php?pid=$id'>$name</a>";
                     // if a portfolio is empty and isn't the only one, add the
                     // delete button
                     if ($current_portfolio->isEmpty() and
