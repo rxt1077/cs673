@@ -5,11 +5,15 @@ import java.io.IOException;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 // Retrieves prices and updates periodically as set in StockServer
 class StockPrices implements Runnable {
-    ConcurrentHashMap<String, String> prices =
+    private ConcurrentHashMap<String, String> prices =
         new ConcurrentHashMap<String, String>();
+    private final static Logger logger =  
+        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME); 
 
     public void run() {
         try {
@@ -18,7 +22,7 @@ class StockPrices implements Runnable {
             Pattern pattern;
             String currentLine, symbol, price;
 
-            System.out.println("Fetching latest stock prices...");
+            logger.log(Level.INFO, "Fetching latest stock prices...");
 
             // DOW 30
             // This can be done in one block on a single web page
@@ -68,12 +72,12 @@ class StockPrices implements Runnable {
                 } catch ( IOException e ) {
                     // Occasionally we get HTTP 503 responses, wait a second
                     // and then move on to the next stock
-                    System.out.println("IOException in Nifty 50 continuing...");
+                    logger.log(Level.INFO, "IOException in Nifty 50 sleeping for 1s...");
                     Thread.sleep(1000);
                 }
             }
         } catch (InterruptedException | IOException e) {
-            e.printStackTrace();
+            logger.log(Level.WARNING, e.getMessage(), e);
         }
     }
 

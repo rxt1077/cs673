@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.Executors;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 public class StockServer implements Runnable {
 
@@ -13,6 +15,8 @@ public class StockServer implements Runnable {
     Thread runningThread = null;
     ScheduledExecutorService executor;
     StockPrices prices = new StockPrices();
+    private final static Logger logger =  
+                Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     
     public StockServer(int port){
         this.serverPort = port;
@@ -22,7 +26,7 @@ public class StockServer implements Runnable {
     public void run(){
         synchronized(this){
             this.runningThread = Thread.currentThread();
-            executor.scheduleAtFixedRate(prices, 0, 60, TimeUnit.SECONDS);
+            executor.scheduleWithFixedDelay(prices, 0, 60, TimeUnit.SECONDS);
         }
         openServerSocket();
         while(! isStopped()){
@@ -31,7 +35,7 @@ public class StockServer implements Runnable {
                 clientSocket = this.serverSocket.accept();
             } catch (IOException e) {
                 if(isStopped()) {
-                    System.out.println("Server Stopped.") ;
+                    logger.log(Level.INFO, "Server Stopped.");
                     return;
                 }
                 throw new RuntimeException(
@@ -39,7 +43,7 @@ public class StockServer implements Runnable {
             }
             new Thread(new StockServerWorker(clientSocket, prices)).start();
         }
-        System.out.println("Server Stopped.") ;
+        logger.log(Level.INFO, "Server Stopped.");
     }
 
     private synchronized boolean isStopped() {

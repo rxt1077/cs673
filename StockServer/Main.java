@@ -1,22 +1,24 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 class Main {
-    private static String currentTime() {
-        return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-    }
+    private final static Logger logger =  
+                Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+
     public static void main(String args[]) {
         int port = 9090;
 
-        System.out.printf("%s - Running StockServer on port %d.\n", currentTime(), port);
+        logger.log(Level.INFO, "Running StockServer on port " + port);         
         StockServer server = new StockServer(port);
         new Thread(server).start();
         try {
             Thread.sleep(24 * 60 * 60 * 1000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            logger.log(Level.INFO, e.getMessage(), e);
         }
-        System.out.printf("%s - Stopping server...", currentTime());
+        logger.log(Level.INFO, "Stopping server...");         
         server.stop();
     }
 }

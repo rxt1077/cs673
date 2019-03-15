@@ -5,12 +5,16 @@ import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
-/* A worker thread to deal with a client */
+/* A worker thread to handle a client */
 public class StockServerWorker implements Runnable {
 
         Socket clientSocket = null;
         StockPrices prices;
+        private final static Logger logger =  
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
         public StockServerWorker(Socket clientSocket, StockPrices prices) {
             this.clientSocket = clientSocket;
@@ -24,13 +28,13 @@ public class StockServerWorker implements Runnable {
             BufferedReader input;
             PrintWriter output;
 
-            System.out.println("Worker thread starting...");
+            logger.log(Level.INFO, "Worker thread starting...");
             try {
                 input = new BufferedReader(new InputStreamReader(
                     clientSocket.getInputStream()));
                 output = new PrintWriter(clientSocket.getOutputStream(), true);
                 while ((inputLine = input.readLine()) != null) {
-                    System.out.printf("Input: %s\n", inputLine);
+                    logger.log(Level.INFO, "Input: " + inputLine);
 
                     /* Parse the input and make sure it's valid */
                     /* The data is bogus, it's not really needed */
@@ -40,14 +44,15 @@ public class StockServerWorker implements Runnable {
                     } else {
                         outputLine = prices.get(userInput[0]);
                     }
-                    System.out.printf("Output: %s\n", outputLine);
+                    logger.log(Level.INFO, "Output: " + outputLine);
                     output.println(outputLine);
+                    output.flush();
                 }
                 input.close();
                 output.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                logger.log(Level.WARNING, e.getMessage(), e);
             }
-            System.out.println("Worker thread exiting...");
+            logger.log(Level.INFO, "Worker thread exiting...");
         }
 }
