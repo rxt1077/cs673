@@ -1,6 +1,6 @@
-# Run StockServer in a loop. It will restart every day
+# Run StockServer in a loop even after logout. It will restart every day
 
-cd ~/cs673/StockServer
+trap "" HUP
 while [ 1 ]; do
     java Main >> StockServer.out 2>&1
 done
