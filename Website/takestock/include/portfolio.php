@@ -356,7 +356,23 @@ class Portfolio {
             }
         }
         return $stocks;
-    }        
+    }
+
+    // returns true if a particular stock has never been bought with this
+    // portfolio before        
+    public function firstBuy($symbol) {
+        // check the logs to see if it's ever been bought
+        $stmt = $this->conn->prepare('SELECT * FROM log WHERE portfolio_id=? ORDER BY datetime ASC;');
+        $stmt->bindParam(1, $this->id);
+        $stmt->execute();
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($results as $result) {
+            if (($result['action'] === 'BUY') and ($result['symbol'] === $symbol)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 ?>

@@ -58,7 +58,16 @@ while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
     if ((! $shares) or ($shares <= 0)) {
         $error = 'Unable to load shares';
     }
-    $price = $client->getQuoteUSD($symbol);
+    // Use the 2019-01-02 price if it's our first time buying it
+    if ($portfolio->firstBuy($symbol)) {
+        $stmt = $conn->prepare("SELECT price FROM historical WHERE symbol=? AND date='2019-01-02'");
+        $stmt->bindParam(1, $symbol);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $price = $result['price'];
+    } else { // otherwise look it up
+        $price = $client->getQuoteUSD($symbol);
+    }
     if (! $price) {
         $error = 'Unable to get quote';
         break;

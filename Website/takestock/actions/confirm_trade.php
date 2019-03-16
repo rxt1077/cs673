@@ -31,9 +31,22 @@
     }
     $symbol = $_GET['symbol'];
 
-    // Set up a connection to StockServer and fetch price
+    // Set up a connection to StockServer 
     $client = new StockClient($stockserver_address, $stockserver_port);
-    $price = $client->getQuoteUSD($symbol);
+
+    // Use the 2019-01-02 price if it's our first time buying it
+    if ($portfolio->firstBuy($symbol)) {
+        $stmt = $conn->prepare("SELECT price FROM historical WHERE symbol=? AND date='2019-01-02'");
+        $stmt->bindParam(1, $symbol);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $price = $result['price'];
+    } else { // otherwise look it up
+        $price = $client->getQuoteUSD($symbol);
+    }
+    if (! $price) {
+        die("Unable to get quote");
+    }
 
     $numStocks = count($portfolio->getStocks());
 
