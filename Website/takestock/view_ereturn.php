@@ -1,35 +1,28 @@
 <?php
+
 	include 'config.php';
 	include 'include/stockclient.php';
 	$client = new StockClient($stockserver_address, $stockserver_port);
 	include 'templates/page_top.php';
-	include 'include/db.php';
-	include 'include/portfolio.php';
-
-	//Make sure they passed a valid portfolio
-	if(!isset($_GET['pid'])){
-		die("No portfolio specified");
-	}
-	$pid = $_GET['pid'];
-	portfolio = new Portfolio($conn);
-	$portfolio->load(pid);
-	if(!$portfolio->isOwner($email)){
-		die("Invalid portfolio");
-	}
 
 ?>
 
 <center>
 	<div class="mdl-card__export">
-		<button class="mdl-button
-					   mdl-js-button
-					   mdl-js-ripple-effect
-					   mdl-button--raised
-					   mdl-button--colored"
-				formaction="$basedir/actions/expected_return.php"
-				type="submit">
-			Export Report
-		</button>
+        <form action='<?php echo "$basedir/actions/expected_return.php"; ?>'
+              method="get">
+            <input type="hidden"
+                   name="pid"
+                   value='<?php echo $pid; ?>'>
+            <button class="mdl-button
+                           mdl-js-button
+                           mdl-js-ripple-effect
+                           mdl-button--raised
+                           mdl-button--colored"
+                    type="submit">
+                Export Report
+            </button>
+        </form>
 	</div>
 </center>
 
@@ -70,7 +63,7 @@
 							$stmt = $conn->prepare('SELECT price FROM historical WHERE symbol=? ORDER BY ABS(DATEDIFF(date, DATE(NOW() - INTERVAL 1 YEAR))) LIMIT 1;');
 							$stmt->bindParam(1, $symbol);
 							$stmt->execute();
-							$result = $stmt->fetch(PDO::FETCH_ASSSOC);
+							$result = $stmt->fetch(PDO::FETCH_ASSOC);
 							$previousPrice = $result['price'];
 
 							//Calculate the growth ratio and future price
@@ -101,15 +94,15 @@
 					$totalER_output = money_format("$%n", $totalER);
 				?>
 				<tfoot class="ereturn">
-					<tr>;
-						<th class='mdl-data-table__cell--non-numeric'>Total</th>;
-						<td></td>;
-						<td></td>;
-						<td></td>;
-						<td></td>;
-						<td></td>;
-						<td></td>;
-						<td>$totalER_output/td>";
+					<tr>
+						<th class='mdl-data-table__cell--non-numeric'>Total</th>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><?php echo $totalER_output; ?></td>
 					</tr>
 				</tfoot>
 			</table>

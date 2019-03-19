@@ -13,7 +13,7 @@ class StockClient {
         }
 
         // pull down the current exchange rate
-        $contents = file_get_contents('https://api.exchangeratesapi.io/latest?base=INR&symbols=USD');
+        $contents = file_get_contents('https://api.exchangeratesapi.io/latest?base=INR&symbols=USD,GBP');
         if (! $contents) {
             die("Unable to get exchange rate");
         }
