@@ -10,6 +10,8 @@
     $db_password = "5E5YTaRZW";
     $db_name = "rxt1077";
     $stockserver_port = 9090;
-    $stockserver_address = "128.235.211.21";
+    $stockserver_address = "128.235.208.201";
+    $runner_path = '/afs/cad/u/r/x/rxt1077/cs673/Runner';
+    $upload_path = '/afs/cad/u/r/x/rxt1077/public_html/UPLOADS';
 
 ?>
