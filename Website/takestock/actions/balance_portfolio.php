@@ -25,11 +25,13 @@ $client = new StockClient($stockserver_address, $stockserver_port);
 
 // Set up the filenames
 $t = time();
-$filename = "$t.csv";
+$input_file = "$uploads_path/input-$t.csv";
+$output_file = "$uploads_path/output-$t.csv";
 
 // Dump the portfolio to a CSV file for R's input
 $t = time();
-$file = fopen("$upload_path/$filename", "w");
+$file = fopen($input_file, "w");
+fputcsv($file, array('symbol', 'shares', 'price'));
 foreach ($portfolio->getStocks() as $stock) {
     $symbol = $stock['symbol'];
     $shares = $stock['shares'];
@@ -38,6 +40,12 @@ foreach ($portfolio->getStocks() as $stock) {
 }
 fclose($file);
 
-system("$runner_path/Runner.sh hello_world.R $upload_path/$filename");
+// Run the test script, first arg is input, second arg is output
+exec("$runner_path/Runner.sh $runner_path/scripts/test.R $input_file $output_file");
+
+// Print out the output file
+$file = fopen($output_file, "r");
+print_r(fgetcsv($file));
+fclose($file);
 
 ?>
