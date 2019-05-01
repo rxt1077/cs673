@@ -1,6 +1,7 @@
 import fix_yahoo_finance as yf
 import requests
 from datetime import timedelta
+import csv
 
 # The Dow30 and Nifty50
 symbols = ['MMM', 'AXP', 'AAPL', 'BA', 'CAT', 'CVX', 'CSCO', 'KO', 'DWDP',
@@ -17,16 +18,16 @@ symbols = ['MMM', 'AXP', 'AAPL', 'BA', 'CAT', 'CVX', 'CSCO', 'KO', 'DWDP',
     'TCS.NS', 'TATAMOTORS.NS', 'TATASTEEL.NS', 'TECHM.NS', 'TITAN.NS',
     'ULTRACEMCO.NS', 'UPL.NS', 'VEDL.NS', 'WIPRO.NS', 'YESBANK.NS', 'ZEEL.NS']
 
-start = '2018-03-13'
-exchange_start = '2018-03-06' # Currency exchange may not be open on start
-end = '2019-03-13'
+start = '2018-04-30'
+exchange_start = '2018-04-30' # Currency exchange may not be open on start
+end = '2019-04-30'
 
 # Exchange rates for INR -> USD by day
 url = f'https://api.exchangeratesapi.io/history?start_at={exchange_start}&end_at={end}&base=INR&symbols=USD'
 resp = requests.get(url)
 exchange_rates = resp.json()
 
-with open('historical.sql', 'w+') as f:
+with open('historical.sql', 'w+') as f, open('historical.csv', 'w') as c:
     f.write('''USE rxt1077;
 
 CREATE TABLE IF NOT EXISTS historical (
@@ -34,6 +35,8 @@ CREATE TABLE IF NOT EXISTS historical (
     symbol VARCHAR(32),
     price DECIMAL(10,2)
 );\n\n''')
+    csv_writer = csv.writer(c)
+    csv_writer.writerow(['symbol', 'date', 'close'])
 
     for symbol in symbols:
         df = yf.download(symbol, start, end)
@@ -55,3 +58,5 @@ CREATE TABLE IF NOT EXISTS historical (
             close = round(close, 2)
 
             f.write(f"INSERT INTO historical VALUES ('{day}', '{symbol}', {close});\n")
+
+            csv_writer.writerow([symbol, date.strftime('%Y-%m-%d'), close])
