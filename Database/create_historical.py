@@ -1,9 +1,10 @@
 import fix_yahoo_finance as yf
 import requests
 from datetime import timedelta
+from datetime import datetime
 import csv
 
-# The Dow30 and Nifty50
+# The Dow30, Nifty50, S&P 500, and BSE SENSEX 
 symbols = ['MMM', 'AXP', 'AAPL', 'BA', 'CAT', 'CVX', 'CSCO', 'KO', 'DWDP',
     'XOM', 'GS', 'HD', 'IBM', 'INTC', 'JNJ', 'JPM', 'MCD', 'MRK', 'MSFT', 'NKE',
     'PFE', 'PG', 'TRV', 'UNH', 'UTX', 'VZ', 'V', 'WMT', 'WBA', 'DIS',
@@ -16,11 +17,12 @@ symbols = ['MMM', 'AXP', 'AAPL', 'BA', 'CAT', 'CVX', 'CSCO', 'KO', 'DWDP',
     'JSWSTEEL.NS', 'KOTAKBANK.NS', 'LT.NS', 'M&M.NS', 'MARUTI.NS', 'NTPC.NS',
     'ONGC.NS', 'POWERGRID.NS', 'RELIANCE.NS', 'SBIN.NS', 'SUNPHARMA.NS',
     'TCS.NS', 'TATAMOTORS.NS', 'TATASTEEL.NS', 'TECHM.NS', 'TITAN.NS',
-    'ULTRACEMCO.NS', 'UPL.NS', 'VEDL.NS', 'WIPRO.NS', 'YESBANK.NS', 'ZEEL.NS']
+    'ULTRACEMCO.NS', 'UPL.NS', 'VEDL.NS', 'WIPRO.NS', 'YESBANK.NS', 'ZEEL.NS',
+    '^GSPC', '^BSESN']
 
-start = '2018-04-30'
-exchange_start = '2018-04-30' # Currency exchange may not be open on start
-end = '2019-04-30'
+start = '2016-03-01'
+exchange_start = '2016-03-01' # Currency exchange may not be open on start
+end = '2019-05-01'
 
 # Exchange rates for INR -> USD by day
 url = f'https://api.exchangeratesapi.io/history?start_at={exchange_start}&end_at={end}&base=INR&symbols=USD'
@@ -40,6 +42,7 @@ CREATE TABLE IF NOT EXISTS historical (
 
     for symbol in symbols:
         df = yf.download(symbol, start, end)
+        previous_date = datetime.strptime(start, '%Y-%m-%d')
         for date, row in df.iterrows():
             day = date.strftime('%Y-%m-%d')
 
@@ -48,7 +51,7 @@ CREATE TABLE IF NOT EXISTS historical (
             exchange_date = date.to_pydatetime();
             while exchange_day not in exchange_rates['rates']:
                 exchange_date = exchange_date - timedelta(days=1)
-                exchange_day = exchange_date.strftime('%Y-%m-%d');
+                exchange_day = exchange_date.strftime('%Y-%m-%d')
 
             # if it is a Nifty50 stock, convert it
             if symbol.endswith('.NS'):
@@ -58,5 +61,8 @@ CREATE TABLE IF NOT EXISTS historical (
             close = round(close, 2)
 
             f.write(f"INSERT INTO historical VALUES ('{day}', '{symbol}', {close});\n")
-
-            csv_writer.writerow([symbol, date.strftime('%Y-%m-%d'), close])
+            
+            # if it is the first day of the month, record it in the CSV
+            if date.month != previous_date.month:
+                csv_writer.writerow([symbol, date.strftime('%Y-%m-%d'), close])
+            previous_date = date

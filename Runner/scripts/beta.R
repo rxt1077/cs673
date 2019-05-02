@@ -1,13 +1,32 @@
-# This script calculates the beta for a list of stocks
+# This script calculates the 3 year monthly beta for a list of stocks
+# it is designed to get results as close to Yahoo Finance as possible:
+# http://investexcel.net/how-does-yahoo-finance-calculate-beta/
 #
 # Usage is: Rscript beta.R <input> <output>
 
-# Calculate the percent change between rows in data
-percentChange = function(data) {
-    difference <- diff(data)
-    previous <- head(lag(data), -1)
-    difference / previous * 100
+# Calculates the 36 month returns for a stock or index
+calcReturns = function(historical, symbol) {
+    data <- head(historical$close[historical$symbol == symbol], 37)
+    diff(data) / head(lag(data), -1)
 }
+
+# Calculates the beta for a stock
+calcBeta = function(historical, bseReturns, nyseReturns, symbol) {
+    # Calculate stock returns for the last 37 months
+    stockReturns <- calcReturns(historical = historical, symbol = symbol)
+
+    # Determine which market returns to use
+    if (endsWith(toupper(symbol), ".NS")) {
+        marketReturns <- bseReturns
+    } else {
+        marketReturns <- nyseReturns
+    }
+
+    # Calculate the slope of the regression line for stock returns as a
+    # function of market returns
+    lm(stockReturns ~ marketReturns)$coefficients[2]
+}
+
 # Parse the arguments
 args <- commandArgs(trailingOnly=TRUE)
 if (length(args) != 2) {
@@ -22,18 +41,15 @@ stocks <- read.csv(file = input)
 # Read the historical data
 historical <- read.csv(file = "../historical.csv")
 
-# Remove dates when both markets weren't open from the list
-stocksPerDate <- aggregate(historical$symbol, by = list(historical$date), FUN = length)
-invalidDates <- stocksPerDate$Group.1[stocksPerDate$x != 80]
-historical <- historical[! historical$date %in% invalidDates, ]
+# Calculate the index change each market
+bseReturns <- calcReturns(historical, '^BSESN')
+nyseReturns <- calcReturns(historical, '^GSPC')
 
-# Calculate the daily percent change for the whole market
-marketClose <- aggregate(historical$close, by = list(historical$date), FUN = sum)
-marketChange <- percentChange(marketClose$x)
-
-# Calculate the beta for each stock in the input file
-for (stock in stocks$symbol) {
-    stockChange <- percentChange(historical$close[historical$symbol == stock])
-    print(stock)
-    print(cov(stockChange, marketChange) / var(marketChange))
-}
+# Calculate the beta for each stock in the input file and write the CSV file
+outputData = data.frame(
+    "symbol" = stocks$symbol,
+    "beta" =  apply(stocks, 1,
+         function(x) calcBeta(historical = historical, bseReturns = bseReturns,
+            nyseReturns = nyseReturns, symbol = x[1]))
+)
+write.csv(outputData, file = output, row.names = FALSE)
