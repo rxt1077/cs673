@@ -47,7 +47,7 @@ output <- args[2]
 stocks <- read.csv(file=input)
 
 # Determine the market for each stock
-stocks$market <- ifelse(grepl(toupper(stocks$symbol), ".NS$"), "NSE", "DOW")
+stocks$market <- ifelse(grepl(".NS$", toupper(stocks$symbol)), "NSE", "DOW")
 if ((! "DOW" %in% stocks$market) | (! "NSE" %in% stocks$market)) {
     stop("Portfolio does not contain at least one stock from each market.")
 }
