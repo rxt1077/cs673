@@ -6,7 +6,7 @@
 
 # Calculates the 36 month returns for a stock or index
 calcReturns = function(historical, symbol) {
-    data <- head(historical$close[historical$symbol == symbol], 37)
+    data <- tail(historical$close[historical$symbol == symbol], 37)
     diff(data) / head(lag(data), -1)
 }
 
@@ -16,7 +16,7 @@ calcBeta = function(historical, bseReturns, nyseReturns, symbol) {
     stockReturns <- calcReturns(historical = historical, symbol = symbol)
 
     # Determine which market returns to use
-    if (endsWith(toupper(symbol), ".NS")) {
+    if (grepl(toupper(symbol), ".NS$")) {
         marketReturns <- bseReturns
     } else {
         marketReturns <- nyseReturns

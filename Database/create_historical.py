@@ -24,12 +24,22 @@ start = '2016-03-01'
 exchange_start = '2016-03-01' # Currency exchange may not be open on start
 end = '2019-05-01'
 
+# Get the 1 month summaries for each stock. This is used by the beta calculator
+# THESE DO NOT NEED TO BE CONVERTED
+with open('historical.csv', 'w') as f:
+    csv_writer = csv.writer(f)
+    csv_writer.writerow(['symbol', 'date', 'close'])
+    for symbol in symbols:
+        df = yf.download(symbol, start=start, end=end, interval='1mo')
+        for date, row in df.iterrows():
+            csv_writer.writerow([symbol, date.strftime('%Y-%m-%d'), row['Close']])
+
 # Exchange rates for INR -> USD by day
 url = f'https://api.exchangeratesapi.io/history?start_at={exchange_start}&end_at={end}&base=INR&symbols=USD'
 resp = requests.get(url)
 exchange_rates = resp.json()
 
-with open('historical.sql', 'w+') as f, open('historical.csv', 'w') as c:
+with open('historical.sql', 'w+') as f:
     f.write('''USE rxt1077;
 
 CREATE TABLE IF NOT EXISTS historical (
@@ -37,12 +47,9 @@ CREATE TABLE IF NOT EXISTS historical (
     symbol VARCHAR(32),
     price DECIMAL(10,2)
 );\n\n''')
-    csv_writer = csv.writer(c)
-    csv_writer.writerow(['symbol', 'date', 'close'])
 
     for symbol in symbols:
         df = yf.download(symbol, start, end)
-        previous_date = datetime.strptime(start, '%Y-%m-%d')
         for date, row in df.iterrows():
             day = date.strftime('%Y-%m-%d')
 
@@ -61,8 +68,3 @@ CREATE TABLE IF NOT EXISTS historical (
             close = round(close, 2)
 
             f.write(f"INSERT INTO historical VALUES ('{day}', '{symbol}', {close});\n")
-            
-            # if it is the first day of the month, record it in the CSV
-            if date.month != previous_date.month:
-                csv_writer.writerow([symbol, date.strftime('%Y-%m-%d'), close])
-            previous_date = date
