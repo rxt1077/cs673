@@ -16,7 +16,7 @@ calcBeta = function(historical, bseReturns, nyseReturns, symbol) {
     stockReturns <- calcReturns(historical = historical, symbol = symbol)
 
     # Determine which market returns to use
-    if (grepl(toupper(symbol), ".NS$")) {
+    if (".NS$", grepl(toupper(symbol))) {
         marketReturns <- bseReturns
     } else {
         marketReturns <- nyseReturns
