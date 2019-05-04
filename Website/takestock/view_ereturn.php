@@ -60,7 +60,7 @@
 							$currValue_output = money_format("$%n", $currValue);
 
 							//Last year's price
-							$stmt = $conn->prepare('SELECT price FROM historical WHERE symbol=? ORDER BY ABS(DATEDIFF(date, DATE(NOW() - INTERVAL 1 YEAR))) LIMIT 1;');
+							$stmt = $conn->prepare('SELECT price FROM historic WHERE symbol=? ORDER BY ABS(DATEDIFF(date, DATE(NOW() - INTERVAL 1 YEAR))) LIMIT 1;');
 							$stmt->bindParam(1, $symbol);
 							$stmt->execute();
 							$result = $stmt->fetch(PDO::FETCH_ASSOC);

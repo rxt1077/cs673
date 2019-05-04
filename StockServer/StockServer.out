@@ -1740,3 +1740,1633 @@ Apr 29, 2019 5:14:56 PM StockPrices run
 INFO: Fetching latest stock prices...
 Apr 29, 2019 5:15:03 PM StockPrices run
 INFO: Fetching latest stock prices...
+Apr 29, 2019 5:16:28 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:16:35 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:18:03 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:18:10 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:18:12 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 29, 2019 5:18:30 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 29, 2019 5:19:37 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:19:45 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:21:12 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:21:19 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:22:44 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:22:52 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:24:18 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:24:23 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:25:51 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:25:55 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:27:27 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:27:29 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:29:00 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:29:04 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:29:34 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 29, 2019 5:30:36 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:30:38 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:32:09 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:32:12 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:33:42 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:33:43 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:35:14 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:35:16 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:35:37 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 29, 2019 5:36:47 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:36:49 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:36:52 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 29, 2019 5:38:20 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:38:22 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:39:50 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:39:53 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:40:08 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 29, 2019 5:41:27 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:41:27 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:41:29 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 29, 2019 5:43:01 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:49:14 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 29, 2019 5:43:00 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:49:30 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:50:07 AM StockServerWorker run
+INFO: Worker thread starting...
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Input: AAPL,2019-04-30
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Output: USD,202.21
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Input: AXP,2019-04-30
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Output: USD,116.73
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Input: CAT,2019-04-30
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Output: USD,139.68
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Input: CSCO,2019-04-30
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Output: USD,55.75
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Input: IBM,2019-04-30
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Output: USD,138.75
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Input: AAPL,2019-04-30
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Output: USD,202.21
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Input: AXP,2019-04-30
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Output: USD,116.73
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Input: CAT,2019-04-30
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Output: USD,139.68
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Input: CSCO,2019-04-30
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Output: USD,55.75
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Input: IBM,2019-04-30
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Output: USD,138.75
+Apr 30, 2019 9:50:08 AM StockServerWorker run
+INFO: Worker thread exiting...
+Apr 30, 2019 9:50:50 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:51:04 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:52:25 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:52:38 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:52:41 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 9:52:47 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 9:53:59 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:54:15 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 9:54:18 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:54:52 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 9:55:35 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:55:53 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:55:59 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 9:57:14 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:57:28 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:58:49 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:59:02 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 9:59:07 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:00:25 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:00:44 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:01:03 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:02:06 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:02:22 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:02:38 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:03:40 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:03:58 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:05:17 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:05:35 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:05:40 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:05:50 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:05:52 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:05:54 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:07:00 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:07:19 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:07:30 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:08:37 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:09:00 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:09:39 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:10:14 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:10:40 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:11:07 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:11:49 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:12:21 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:12:55 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:13:25 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:13:57 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:14:01 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:15:03 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:15:29 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:15:42 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:15:52 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:16:40 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:17:09 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:18:16 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:18:42 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:18:50 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:19:52 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:20:06 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:20:19 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:21:26 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:21:52 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:23:04 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:23:18 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:23:30 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:23:47 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:24:40 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:25:07 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:25:10 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:25:16 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:26:20 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:26:45 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:27:53 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:28:22 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:29:29 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:29:48 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:29:59 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:31:06 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:31:37 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:32:41 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:33:11 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:34:14 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:34:45 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:35:45 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:36:21 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:37:20 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:37:58 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:38:20 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:38:56 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:39:35 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:40:31 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:41:12 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:42:07 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:42:47 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:43:41 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:44:23 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:45:00 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:45:13 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:46:02 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:46:48 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:47:37 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:48:00 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:48:24 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:48:52 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:49:13 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:50:01 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:50:49 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:51:39 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:51:58 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:52:24 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:53:15 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:53:47 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:53:56 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:54:28 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:54:52 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:55:02 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:55:05 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:55:34 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:55:38 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 10:56:29 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:57:11 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:58:05 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:58:48 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 10:59:41 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:00:23 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:01:14 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:01:55 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:02:52 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:03:29 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:03:56 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 11:04:26 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:04:45 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 11:05:17 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:05:22 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 11:05:27 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 11:05:44 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 11:06:01 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:06:59 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:07:38 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:08:04 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 11:08:35 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:09:19 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:10:13 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:10:56 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:11:33 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 11:11:38 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 11:11:51 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:12:40 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:13:17 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+Apr 30, 2019 11:13:28 AM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:14:22 AM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 4:55:53 PM StockPrices run
+INFO: Fetching latest stock prices...
+Apr 30, 2019 11:13:59 AM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+May 03, 2019 4:57:25 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 4:57:25 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 4:58:59 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 4:59:02 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:00:32 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:00:36 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:01:10 PM Main main
+INFO: Running StockServer on port 9090
+May 03, 2019 5:01:11 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:01:12 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:01:12 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:01:22 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:02:05 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:02:09 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:02:52 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:03:37 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:03:41 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:04:11 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+May 03, 2019 5:04:25 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:05:05 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:05:06 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:05:10 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:05:16 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:05:29 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:05:52 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:05:54 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:05:55 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:05:55 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:05:55 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:05:55 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:05:55 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:05:55 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:05:55 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:05:55 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:05:55 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:05:55 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:05:56 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:05:58 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:06:30 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+May 03, 2019 5:06:46 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:06:52 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:07:11 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:07:32 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:08:22 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:08:28 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:09:09 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:09:38 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:09:39 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:09:39 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+May 03, 2019 5:09:57 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:10:04 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:10:11 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:10:11 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:10:11 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:10:11 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:10:11 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:10:11 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:10:11 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:10:11 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:10:11 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:10:11 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:10:11 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:10:11 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:10:32 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:10:35 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:10:35 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:10:35 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:10:35 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:10:35 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:10:35 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:10:35 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:10:35 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:10:35 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:10:35 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:10:35 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:10:36 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:10:44 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:10:57 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:10:57 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:10:57 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:10:57 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:10:57 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:10:57 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:10:57 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:10:57 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:10:57 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:10:57 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:10:57 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:10:58 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:11:21 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:11:21 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:11:21 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:11:21 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:11:21 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:11:21 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:11:21 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:11:21 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:11:21 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:11:21 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:11:21 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:11:21 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:11:32 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:11:41 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:11:52 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+May 03, 2019 5:12:18 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:13:07 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:13:09 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:13:10 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:13:10 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:13:10 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:13:10 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:13:10 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:13:10 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:13:10 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:13:10 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:13:10 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:13:10 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:13:10 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:13:14 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:13:48 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:14:20 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:14:20 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:14:20 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:14:20 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:14:20 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:14:20 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:14:20 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:14:20 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:14:20 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:14:20 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:14:20 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:14:20 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:14:39 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:14:46 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:15:03 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+May 03, 2019 5:15:19 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:16:11 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:16:20 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:16:51 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:17:00 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 5:17:00 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 5:17:00 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 5:17:00 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 5:17:00 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 5:17:00 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 5:17:00 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 5:17:00 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 5:17:00 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 5:17:00 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 5:17:00 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 5:17:00 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:17:09 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+May 03, 2019 5:17:41 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:17:50 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:18:25 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:19:13 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:19:22 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:19:55 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:20:43 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:20:52 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:21:25 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+May 03, 2019 5:21:28 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:22:18 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:22:26 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:22:58 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:23:51 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:23:57 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:24:29 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:25:23 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:25:28 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:26:00 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:26:57 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:27:00 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:27:30 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:28:30 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:28:31 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:29:02 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:30:01 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:30:03 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:30:10 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+May 03, 2019 5:30:34 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:31:36 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:31:37 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:32:05 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:33:06 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:33:07 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:33:36 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:34:38 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:34:39 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:35:05 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:36:10 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:36:13 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:36:35 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:37:42 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:37:44 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:38:06 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:39:11 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:39:14 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:39:36 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:40:41 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:40:44 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:41:06 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:42:11 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:42:14 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:42:36 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:43:40 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:43:45 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:44:06 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:45:10 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:45:16 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:45:37 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:46:40 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:46:45 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:47:07 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:48:10 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:48:16 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:48:35 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:48:46 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+May 03, 2019 5:49:40 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:49:47 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:50:04 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:51:10 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:51:16 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:51:34 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:52:40 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:52:47 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:53:03 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:54:11 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:54:15 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:54:32 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:55:42 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:55:46 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:55:50 PM StockPrices run
+INFO: IOException in Nifty 50 sleeping for 1s...
+May 03, 2019 5:56:03 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:57:33 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:53:25 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:53:31 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 5:57:16 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:53:32 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:54:05 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 7:54:05 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 7:54:05 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 7:54:05 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 7:54:05 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 7:54:05 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 7:54:05 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 7:54:05 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 7:54:05 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 7:54:05 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 7:54:05 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 7:54:06 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 7:54:59 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:54:59 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 5:57:12 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:55:13 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:55:33 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 7:55:33 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 7:55:33 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 7:55:33 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 7:55:33 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 7:55:33 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 7:55:33 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 7:55:33 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 7:55:33 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 7:55:33 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 7:55:33 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 7:55:33 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 7:55:51 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 7:55:51 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 7:55:51 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 7:55:51 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 7:55:51 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 7:55:51 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 7:55:51 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 7:55:51 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 7:55:51 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 7:55:51 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 7:55:51 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 7:55:51 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 7:56:28 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:56:28 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:56:40 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:57:57 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:57:57 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:58:01 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 7:58:01 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 7:58:01 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 7:58:01 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 7:58:01 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 7:58:01 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 7:58:01 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 7:58:01 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 7:58:01 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 7:58:01 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 7:58:01 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 7:58:01 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 7:58:09 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:59:25 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:59:26 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 7:59:37 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:00:48 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 8:00:48 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 8:00:48 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 8:00:48 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 8:00:48 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 8:00:48 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 8:00:48 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 8:00:48 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 8:00:48 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 8:00:48 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 8:00:48 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 8:00:48 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 8:00:54 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:00:54 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:01:05 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:02:23 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:02:24 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:02:34 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:02:34 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 8:02:34 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 8:02:34 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 8:02:34 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 8:02:34 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 8:02:34 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 8:02:34 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 8:02:34 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 8:02:34 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 8:02:34 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 8:02:34 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 8:02:35 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 8:03:16 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 8:03:16 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 8:03:16 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 8:03:16 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 8:03:16 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 8:03:16 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 8:03:16 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 8:03:16 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 8:03:16 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 8:03:16 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 8:03:16 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 8:03:17 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 8:03:33 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 8:03:33 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 8:03:33 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 8:03:33 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 8:03:33 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 8:03:33 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 8:03:33 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 8:03:33 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 8:03:33 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 8:03:33 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 8:03:33 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 8:03:33 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 8:03:53 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:03:55 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:04:04 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 8:05:07 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 8:05:18 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 8:05:18 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 8:05:23 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 8:05:24 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Input: ADANIPORTS.NS,2019-05-03
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Output: INR,387.25
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Input: ADANIPORTS.NS,2019-05-03
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Output: INR,387.25
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 8:05:24 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 8:05:31 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 8:05:31 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 8:05:31 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 8:05:31 PM StockServerWorker run
+INFO: Input: ADANIPORTS.NS,2019-05-03
+May 03, 2019 8:05:31 PM StockServerWorker run
+INFO: Output: INR,387.25
+May 03, 2019 8:05:31 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 8:05:31 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 8:05:31 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 8:05:31 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 8:05:31 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 8:05:31 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 8:05:31 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 8:05:31 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 8:05:32 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:05:36 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 8:06:54 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:06:55 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:07:04 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:08:27 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:08:27 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:08:40 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:09:59 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:09:59 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:10:11 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:10:47 PM StockServerWorker run
+INFO: Worker thread starting...
+May 03, 2019 8:10:48 PM StockServerWorker run
+INFO: Input: AAPL,2019-05-03
+May 03, 2019 8:10:48 PM StockServerWorker run
+INFO: Output: USD,211.75
+May 03, 2019 8:10:48 PM StockServerWorker run
+INFO: Input: ADANIPORTS.NS,2019-05-03
+May 03, 2019 8:10:48 PM StockServerWorker run
+INFO: Output: INR,387.25
+May 03, 2019 8:10:48 PM StockServerWorker run
+INFO: Input: AXP,2019-05-03
+May 03, 2019 8:10:48 PM StockServerWorker run
+INFO: Output: USD,119.35
+May 03, 2019 8:10:48 PM StockServerWorker run
+INFO: Input: CAT,2019-05-03
+May 03, 2019 8:10:48 PM StockServerWorker run
+INFO: Output: USD,139.06
+May 03, 2019 8:10:48 PM StockServerWorker run
+INFO: Input: CSCO,2019-05-03
+May 03, 2019 8:10:48 PM StockServerWorker run
+INFO: Output: USD,54.94
+May 03, 2019 8:10:48 PM StockServerWorker run
+INFO: Input: IBM,2019-05-03
+May 03, 2019 8:10:48 PM StockServerWorker run
+INFO: Output: USD,140.25
+May 03, 2019 8:10:53 PM StockServerWorker run
+INFO: Worker thread exiting...
+May 03, 2019 8:11:31 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:11:31 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:11:42 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:13:00 PM StockPrices run
+INFO: Fetching latest stock prices...
+May 03, 2019 8:13:00 PM StockPrices run
+INFO: Fetching latest stock prices...

@@ -44,7 +44,7 @@ foreach ($stocks as $stock) {
     // Get last year's price (as close to the date as we can)    
     $stmt = $conn->prepare('
 SELECT price
-FROM historical
+FROM historic
 WHERE symbol=?
 ORDER BY ABS(DATEDIFF(date, DATE(NOW() - INTERVAL 1 YEAR)))
 LIMIT 1;');
