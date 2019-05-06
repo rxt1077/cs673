@@ -1,5 +1,5 @@
 <?php
-
+ 
 class Portfolio {
     private $conn;
     private $id;
@@ -101,6 +101,8 @@ class Portfolio {
         } else {
             $this->stocks = array();
         }
+        // Calculate the beta for each stock we loaded
+        $this->calcBetas();
     }
 
     // save the portfolio to the DB
@@ -372,6 +374,38 @@ class Portfolio {
             }
         }
         return true;
+    }
+
+    public function calcBetas() {
+        // Needed for $uploads_path
+        include 'config.php';
+
+        // Setup the filenames
+        $t = time();
+        $input_file = "$uploads_path/input-$t.csv";
+        $output_file = "$uploads_path/output-$t.csv";
+
+        // Put the stock symbols in a file
+        $file = fopen($input_file, "w");
+        fputcsv($file, array("symbol"));
+        foreach ($this->stocks as $stock) {
+            $symbol = $stock['symbol'];
+            fputcsv($file, array($symbol));
+        }
+        fclose($file);
+
+        // Run R
+        $output = shell_exec("$runner_path/Runner.sh $runner_path/scripts/beta.R $input_file $output_file 2>&1");
+        
+        // Read the output into $stocks[$i]['beta']
+        $file = fopen($output_file, "r");
+        fgetcsv($file);
+        $i = 0;
+        while (($row = fgetcsv($file)) !== FALSE) {
+            $this->stocks[$i]['beta'] = round($row[1], 2);
+            $i++;
+        }
+        fclose($file);   
     }
 }
 

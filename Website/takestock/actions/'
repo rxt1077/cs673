@@ -45,9 +45,8 @@
 ?>
 
 <form method="post"
-      action='<?php echo "$basedir/actions/perform_actions.php"; ?>'
+      action=""
       id="form">
-    <input type="hidden" name="pid" value="<?php echo $pid; ?>">
     <div class="mdl-card__supporting-text">
         <div class="mdl-grid">
             The following actions will be taken:
@@ -56,10 +55,7 @@
             $file = fopen($output_file, 'r');
             $row = fgetcsv($file);
             while (($row = fgetcsv($file)) !== FALSE) {
-                echo "<div class='mdl-grid'>$row[0] $row[2] $row[1]</div>";
-                echo "<input type='hidden' name='actions[]' value='$row[0]'>";
-                echo "<input type='hidden' name='symbols[]' value='$row[1]'>";
-                echo "<input type='hidden' name='amounts[]' value='$row[2]'>";
+               echo "<div class='mdl-grid'>$row[0] $row[2] $row[1]</div>";
             }
             fclose($file);
         ?> 
@@ -81,18 +77,6 @@
         <div class="mdl-grid" id="output" style="display:none;">
             <?php echo "<pre>$output</pre>" ?>
         </div>
-        <center>
-            <div class="mdl-card__actions">
-                <button class="mdl-button
-                               mdl-js-button
-                               mdl-js-ripple-effect
-                               mdl-button--raised
-                               mdl-button--colored"
-                        type="submit">
-                    Confirm
-                </button>
-            </div>
-        </center>
 </form>
 
 <?php include 'templates/dialog_bottom.php'; ?>

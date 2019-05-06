@@ -203,6 +203,7 @@ echo "<script src='$basedir/js/symbols.js'></script>";
                         <th>Shares</th>
                         <th>Price/Share</th>
                         <th>Value</th>
+                        <th>Beta</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -216,11 +217,13 @@ echo "<script src='$basedir/js/symbols.js'></script>";
                         $value = $shares * $price;
                         $value_output = money_format("$%n", $value);
                         $total += $value;
+                        $beta = $stock['beta'];
                         echo '<tr>';
                         echo "    <td class='mdl-data-table__cell--non-numeric'>$symbol</td>";
                         echo "    <td>$shares</td>";
                         echo "    <td>$price_output</td>";
                         echo "    <td>$value_output</td>";
+                        echo "    <td>$beta</td>";
                         echo '</tr>';
                     }                    
                 ?>

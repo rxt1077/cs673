@@ -50,6 +50,11 @@
                 <nav class="mdl-navigation
                             mdl-layout--large-screen-only">
                     <span class="mdl-navigation__link">
+                        <a href='<?php echo "$basedir/actions/balance_portfolio.php?pid=$pid"; ?>'>
+                            Balance Portfolio
+                        </a>
+                    </span>
+                    <span class="mdl-navigation__link">
                         <a href='<?php echo "$basedir/view_ereturn.php?pid=$pid"; ?>'>
                             Expected Return
                         </a>
