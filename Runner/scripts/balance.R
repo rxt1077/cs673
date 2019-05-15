@@ -65,9 +65,6 @@ nse <- 0.30
 dow <- 0.70
 thresh <- 0.05 # The percentage rule is solved within +- this value
 
-# NOT YET IMPLEMENTED
-change <- 0.10 # The factor by which the amount of stock shares can change
-
 # Objective function
 
 # Maximize the value of the portfolio
@@ -75,7 +72,7 @@ f.obj <- stocks$price
 
 # Constraints
 
-# the portfolio value cannot be great than its current value
+# the portfolio value cannot be greater than its current value
 cons1 <- stocks$price
 
 # make vectors of the NSE / DOW coefficients to meet percentages
