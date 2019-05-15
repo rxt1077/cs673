@@ -123,7 +123,7 @@ print(ledger)
 
 # Create the order file
 orders = data.frame(
-    "difference" = ledger$startingShares - ledger$endingShares,
+    "difference" = ledger$endingShares - ledger$startingShares,
     "action" = rep("NONE", size),
     "ticker" = ledger$symbol,
     "nshares" = rep(0, size),

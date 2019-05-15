@@ -14,7 +14,7 @@ class Main {
         StockServer server = new StockServer(port);
         new Thread(server).start();
         try {
-            Thread.sleep(24 * 60 * 60 * 1000);
+            Thread.sleep(7 * 24 * 60 * 60 * 1000);
         } catch (InterruptedException e) {
             logger.log(Level.INFO, e.getMessage(), e);
         }
